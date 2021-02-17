@@ -1,0 +1,32 @@
+.green-hover * :hover{
+    color: #23A455;
+}
+
+.light-green *{
+ color: #5dd598;
+}
+
+#logo img{
+    max-height: 75px;
+    width: auto;
+}
+.hover-quietevous:hover * {
+
+    color: whitesmoke;
+}
+.hover-quietevous:hover{
+    background-color: #23A455;
+}
+.hover-quietevous, .hover-quietevous * {
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+.image img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.row.reverse{
+    flex-direction: row-reverse;
+}

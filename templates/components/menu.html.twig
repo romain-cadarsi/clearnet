@@ -1,0 +1,64 @@
+<header id="header" data-fullwidth="true">
+    <div class="header-inner">
+        <div class="container">
+
+            <div id="logo">
+                <a href="{{ path('home') }}">
+                    <span class="logo-default"><img src="{{ asset('images/logo-dark.png') }}" alt="Clearnet"></span>
+                    <span class="logo-dark"><img src="{{ asset('images/logo-light.png') }}" alt="Clearnet"></span>
+                    <span class="logo-responsive"><img src="{{ asset('images/logo-petit.png') }}" alt="Clearnet"></span>
+                </a>
+            </div>
+
+
+            <div id="mainMenu-trigger">
+                <a class="lines-button x"><span class="lines"></span></a>
+            </div>
+
+
+            <div id="mainMenu">
+                <div class="container">
+                    <nav>
+                        <ul>
+
+                            <li><a href="{{ path('home') }}">Accueil</a></li>
+                            <li class="dropdown"><a href="{{ path('prestations') }}">Nos Prestations</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="header-topbar.html">1</a></li>
+                                    <li><a href="header-topbar-dark.html">2</a></li>
+                                    <li><a href="header-topbar-transparent.html">3</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown mega-menu-item"><span class="dropdown-arrow"></span><a href="#">Vous êtes ?</a>
+                                <ul class="dropdown-menu" style="">
+                                    <li class="mega-menu-content">
+                                        <div class="row">
+                                            <div class="col-lg-6 text-center hover-quietevous">
+                                                <a href="#"> <h1 class="text-lg text-uppercase"><span class="fa fa-user-tie"></span></h1></a>
+                                                <a href="#"> <h3>Professionnel</h3></a>
+                                            </div>
+                                            <div class="col-lg-6 text-center hover-quietevous">
+                                                <a href="#"><h1 class="text-lg text-uppercase"><span class="fa fa-user"></span> </h1></a>
+                                                <a href="#"> <h3>Particulier</h3></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="{{ path('aboutUs') }}">A propos de nous</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ path('organisation') }}">Notre organisation</a></li>
+                                    <li><a href="{{ path('engagement') }}">Nos engagements</a></li>
+                                    <li><a href="header-topbar-transparent.html">3</a></li>
+                                </ul>
+                            </li>
+                            <li ><a href="{{ path('contact') }}">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
