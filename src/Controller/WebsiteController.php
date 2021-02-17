@@ -61,4 +61,13 @@ class WebsiteController extends AbstractController
         return $this->render('pages/nosEngagements.html.twig', [
         ]);
     }
+
+    /**
+     * @Route("/prestations/isolation-combles", name="isolationCombles")
+     */
+    public function isolationCombles(): Response
+    {
+        return $this->render('prestations/isolationCombles.html.twig', [
+        ]);
+    }
 }

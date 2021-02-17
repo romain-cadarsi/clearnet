@@ -30,3 +30,10 @@
 .row.reverse{
     flex-direction: row-reverse;
 }
+
+.icon-box.fancy:hover i{
+    opacity: 0.4;
+}
+.icon-box.fancy .icon i {
+    color: #0f954f;
+}
