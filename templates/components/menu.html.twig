@@ -24,8 +24,8 @@
                             <li><a href="{{ path('home') }}">Accueil</a></li>
                             <li class="dropdown"><a href="{{ path('prestations') }}">Nos Prestations</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="header-topbar.html">1</a></li>
-                                    <li><a href="header-topbar-dark.html">2</a></li>
+                                    <li><a href="{{ path('isolationCombles') }}">Isolation des Combles</a></li>
+                                    <li><a href="{{ path('calorifugeage') }}">Calorifugeage</a></li>
                                     <li><a href="header-topbar-transparent.html">3</a></li>
                                 </ul>
                             </li>
@@ -34,12 +34,12 @@
                                     <li class="mega-menu-content">
                                         <div class="row">
                                             <div class="col-lg-6 text-center hover-quietevous">
-                                                <a href="#"> <h1 class="text-lg text-uppercase"><span class="fa fa-user-tie"></span></h1></a>
-                                                <a href="#"> <h3>Professionnel</h3></a>
+                                                <a href="{{ path('prestations') }}"> <h1 class="text-lg text-uppercase"><span class="fa fa-user-tie"></span></h1></a>
+                                                <a href="{{ path('prestations') }}"> <h3>Professionnel</h3></a>
                                             </div>
                                             <div class="col-lg-6 text-center hover-quietevous">
-                                                <a href="#"><h1 class="text-lg text-uppercase"><span class="fa fa-user"></span> </h1></a>
-                                                <a href="#"> <h3>Particulier</h3></a>
+                                                <a href="{{ path('prestations') }}"><h1 class="text-lg text-uppercase"><span class="fa fa-user"></span> </h1></a>
+                                                <a href="{{ path('prestations') }}"> <h3>Particulier</h3></a>
                                             </div>
                                         </div>
                                     </li>

@@ -70,4 +70,12 @@ class WebsiteController extends AbstractController
         return $this->render('prestations/isolationCombles.html.twig', [
         ]);
     }
+    /**
+     * @Route("/prestations/calorifugeage", name="calorifugeage")
+     */
+    public function calorifugeage(): Response
+    {
+        return $this->render('prestations/calorifugeage.html.twig', [
+        ]);
+    }
 }

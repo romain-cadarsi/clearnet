@@ -1,121 +1,47 @@
+{% extends('prestations/pagePrestationsTemplate.html.twig') %}
 
-{% extends('base.html.twig') %}
+{% block prestation_title %}Isolation des combles {% endblock %}
+{% block prestation_description %}Une maison, un bâtiment ou un local mal isolé favorise les déperditions thermiques et augmente par
+conséquent fortement les consommations de chauffage. Procéder à l&#39;isolation des combles
+permettra de réduire votre facture et de bénéficier à nouveau d&#39;un confort optimal.{% endblock %}
+{% block fonctionnement %}Dans un premier temps, isoler ses combles est une étape clé dans la rénovation énergétique. En
+    effet, pour améliorer la performance énergétique de vos bâtiments ainsi que celle de vos locaux, les
+    travaux d’isolation de combles doivent être une priorité.
+    Un comble désigne l&#39;espace se trouvant entre la toiture et le dernier plancher d&#39;un bâtiment. Ils
+    peuvent être définis comme &quot;combles perdus&quot; ou bien comme &quot;combles aménageable&quot;. En fonction
+    de la configuration de vos lieux, différents types d&#39;isolations sont envisageables. La technique
+    d&#39;isolation par soufflage ainsi que l&#39;isolation par &quot;rampants&quot;. {% endblock %}
+{% block image_asset %}{{ asset('images/test.jpg') }}{% endblock %}
 
-    {% block content %}
 
+{% block a_icon %}key{% endblock %}
+{% block a %}Homogénéité{% endblock %}
+{% block a_desc %}Avec l'isolation de vos combles, les températures dans tous vos bâtiments seront équitablement répartis.{% endblock %}
 
-        <section class="p-t-100 pb-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                            <h2><span>Isolation des combles</span></h2>
-                            <p>Une maison, un bâtiment ou un local mal isolé favorise les déperditions thermiques et augmente par
-                                conséquent fortement les consommations de chauffage. Procéder à l&#39;isolation des combles
-                                permettra de réduire votre facture et de bénéficier à nouveau d&#39;un confort optimal.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+{% block b_icon %}comment-slash{% endblock %}
+{% block b %}Aucune démarche{% endblock %}
+{% block b_desc %}Vous n'aurez aucune démarche administrative à prévoir.{% endblock %}
 
-        <section>
-            <div class="container"  data-animate="fadeInUp" data-animate-delay="0">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                            <h4><span>Comment ça fonctionne ?</span></h4>
-                            <p>Dans un premier temps, isoler ses combles est une étape clé dans la rénovation énergétique. En
-                                effet, pour améliorer la performance énergétique de vos bâtiments ainsi que celle de vos locaux, les
-                                travaux d’isolation de combles doivent être une priorité.
-                                Un comble désigne l&#39;espace se trouvant entre la toiture et le dernier plancher d&#39;un bâtiment. Ils
-                                peuvent être définis comme &quot;combles perdus&quot; ou bien comme &quot;combles aménageable&quot;. En fonction
-                                de la configuration de vos lieux, différents types d&#39;isolations sont envisageables. La technique
-                                d&#39;isolation par soufflage ainsi que l&#39;isolation par &quot;rampants&quot;.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="image vertical-align">
-                            <img src="{{ asset('images/test.jpg') }}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+{% block c_icon %}comment-fire{% endblock %}
+{% block c %}Ignifugé{% endblock %}
+{% block c_desc %}Tous les matériaux utilisés pour l'intervention sont 100% ignifugés.{% endblock %}
 
-        <section class="pb-0">
-            <div class="container">
-                <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                    <h4><span>Quels sont les avantages ?</span></h4>
-                </div>
-            </div>
-        </section>
+{% block d_icon %}building{% endblock %}
+{% block d %}Valorisation du parc immobilier{% endblock %}
+{% block d_desc %}L'isolation des combles apportera une plus-value notable à votre bien.{% endblock %}
 
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" > <i class="fa fa-key"></i> </div>
-                            <h3>Homogénéité</h3>
-                            <p>Avec l'isolation de vos combles, les températures dans tous vos bâtiments seront équitablement répartis.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" > <i class="fa fa-comment-slash"></i></div>
-                            <h3>Aucune démarche</h3>
-                            <p>Vous n'aurez aucune démarche administrative à prévoir. </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" > <i class="fa fa-fire"></i></div>
-                            <h3>Ignifugé</h3>
-                            <p>Tous les matériaux utilisés pour l'intervention sont 100% ignifugés.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" > <i class="fa fa-building"></i></div>
-                            <h3>Valorisation du parc immobilier</h3>
-                            <p>L'isolation des combles apportera une plus-value notable à votre bien.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" > <i class="fa fa-leaf"></i></div>
-                            <h3>Écologique </h3>
-                            <p>Réduire ses consommations d’énergies entraîne une diminution de la production des gaz à effet de serre. L'intervention s'inscrit dans une démarche écologique</p>
-                        </div>
-                    </div>
+{% block e_icon %}leaf{% endblock %}
+{% block e %}Écologique{% endblock %}
+{% block e_desc %}Réduire ses consommations d’énergies entraîne une diminution de la production des gaz à effet de serre. L'intervention s'inscrit dans une démarche écologique{% endblock %}
 
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" >
-                                <i class="fa fa-check-double"></i></div>
-                             <h3>Double isolation</h3>
-                            <p>Cette technique permet dans un premier temps, d'améliorer votre isolation thermique mais également l'isolation acoustique de votre immeuble.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" > <i class="fa fa-gears"></i></div>
-                            <h3>Entretien</h3>
-                            <p>L’amélioration de l’étanchéité de vos bâtiments à l'eau ainsi qu'à l'air permet une diminution du besoin en entretien.</p>
-                        </div>
-                    </div>
+{% block f_icon %}check-double{% endblock %}
+{% block f %}Double isolation{% endblock %}
+{% block f_desc %}Cette technique permet dans un premier temps, d'améliorer votre isolation thermique mais également l'isolation acoustique de votre immeuble.{% endblock %}
 
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box medium fancy">
-                            <div class="icon animated visible" >
-                                <i class="fa fa-flag"></i></div>
-                             <h3>Éligible au programme d'Etat</h3>
-                            <p>Ce procédé est entièrement pris en charge dans le cadre du programme des CEE.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+{% block g_icon %}gears{% endblock %}
+{% block g %}Entretien{% endblock %}
+{% block g_desc %}L’amélioration de l’étanchéité de vos bâtiments à l'eau ainsi qu'à l'air permet une diminution du besoin en entretien.{% endblock %}
 
-    {% endblock %}
+{% block h_icon %}flag{% endblock %}
+{% block h %}Éligible au programme d'Etat{% endblock %}
+{% block h_desc %}Ce procédé est entièrement pris en charge dans le cadre du programme des CEE.{% endblock %}
