@@ -1,0 +1,28 @@
+{% extends('prestations/sousPrestationTemplate.html.twig') %}
+
+{% block prestation_title %}Ballon chauffe-eau thermodynamique{% endblock %}
+{% block prestation_description %}Le chauffe-eau thermodynamique est un équipement qui permet
+d’offrir une solution performante et économique pour subvenir aux
+besoins en eau chaude sanitaire de toute la maison.{% endblock %}
+{% block fonctionnement %}Le principe du chauffe-eau thermodynamique est similaire à celui d’une pompe à chaleur. Il va
+    capturer l’énergie présente dans l’air ambiant et se servir de cette chaleur pour chauffer l’eau du
+    ballon. Le ballon thermodynamique peut être installé sur ai ambiant ou sur air extérieur. En effet,
+    l’air peut être prélevé à l’intérieur de la pièce où est installé le ballon ou à l’extérieur{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/ballon.webp') }}{% endblock %}
+
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/refund.png"/>{% endblock %}
+{% block a %}Economique{% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/dashboard.png"/>{% endblock %}
+{% block b %}Temps de chauffe rapide{% endblock %}
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
+{% block c %}Ecologique{% endblock %}
+
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
+{% block d %}Aide de l’Etat MaPrimeRenov{% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/particulier.html.twig') %}
+{% endblock %}

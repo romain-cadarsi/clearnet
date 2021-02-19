@@ -1,11 +1,10 @@
-<header id="header" data-fullwidth="true">
+<header id="header" data-transparent="true">
     <div class="header-inner">
         <div class="container">
 
             <div id="logo">
                 <a href="{{ path('home') }}">
-                    <span class="logo-default"><img src="{{ asset('images/logo-dark.png') }}" alt="Clearnet"></span>
-                    <span class="logo-dark"><img src="{{ asset('images/logo-light.png') }}" alt="Clearnet"></span>
+                    <span class="logo-default"><img src="{{ asset('images/logo.png') }}" alt="Clearnet"></span>
                     <span class="logo-responsive"><img src="{{ asset('images/logo-petit.png') }}" alt="Clearnet"></span>
                 </a>
             </div>
@@ -24,24 +23,20 @@
                             <li><a href="{{ path('home') }}">Accueil</a></li>
                             <li class="dropdown"><a href="{{ path('prestations') }}">Nos Prestations</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ path('isolationCombles') }}">Isolation des Combles</a></li>
                                     <li><a href="{{ path('calorifugeage') }}">Calorifugeage</a></li>
-                                    <li><a href="header-topbar-transparent.html">3</a></li>
+                                    <li><a href="{{ path('matelasIsolant') }}">Matelas Isolants</a></li>
+                                    <li><a href="{{ path('recuperateurChaleurGroupeFroid') }}">Récupérateur de chaleur</a></li>
+                                    <li><a href="{{ path('economiseurDeau') }}">Economiseur d’eau</a></li>
+                                    <li><a href="{{ path('ecoRegulateur') }}">Eco Régulateur</a></li>
+                                    <li><a href="{{ path('organeDeChauffe') }}">Organe de chauffe</a></li>
+                                    <li><a href="{{ path('pompeAChaleur') }}">Pompe à chaleur</a></li>
+                                    <li><a href="{{ path('productionEauChaudeSanitaire') }}">Production d'eau chaude sanitaire</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown mega-menu-item"><span class="dropdown-arrow"></span><a href="#">Vous êtes ?</a>
                                 <ul class="dropdown-menu" style="">
                                     <li class="mega-menu-content">
-                                        <div class="row">
-                                            <div class="col-lg-6 text-center hover-quietevous">
-                                                <a href="{{ path('prestations') }}"> <h1 class="text-lg text-uppercase"><span class="fa fa-user-tie"></span></h1></a>
-                                                <a href="{{ path('prestations') }}"> <h3>Professionnel</h3></a>
-                                            </div>
-                                            <div class="col-lg-6 text-center hover-quietevous">
-                                                <a href="{{ path('prestations') }}"><h1 class="text-lg text-uppercase"><span class="fa fa-user"></span> </h1></a>
-                                                <a href="{{ path('prestations') }}"> <h3>Particulier</h3></a>
-                                            </div>
-                                        </div>
+                                        {% include('composantsPages/wizardPrestationsMenu.html.twig') %}
                                     </li>
                                 </ul>
                             </li>
@@ -50,6 +45,8 @@
                                     <li><a href="{{ path('aboutUs') }}">Qui sommes nous ?</a></li>
                                     <li><a href="{{ path('organisation') }}">Notre organisation</a></li>
                                     <li><a href="{{ path('engagement') }}">Nos engagements</a></li>
+                                    <li><a href="{{ path('zoneDintervention') }}">Carte Zone d'intervention</a></li>
+                                    <li><a href="{{ path('ilsNousFontConfiance') }}">Ils nous font confiance</a></li>
                                 </ul>
                             </li>
                             <li ><a href="{{ path('contact') }}">Contact</a>

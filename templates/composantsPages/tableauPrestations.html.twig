@@ -1,123 +1,24 @@
-<section class="pt-0">
+<section id="prestation" class="pt-0">
     <div class="container">
         {#            Debut grid#}
         <div class="grid-filter text-center mt-5 mb-5" data-layout="#prestations" data-animate="fadeInUp" data-animate-delay="0">
             <ul>
-                <li class="" id="pourTous"><a href="#" data-category="*">Toutes les prestations</a></li>
-                <li class="" id="pourPros"><a data-category=".pros" href="#">Destiné aux professionnels</a></li>
-                <li class="" id="pourParticuliers"><a data-category=".particuliers" href="#">Destinés aux particuliers</a></li>
+                <li class="" id="pourTous"><a href="#" data-category="*"><img src="https://img.icons8.com/dusk/64/000000/conference.png"/><br> Toutes les prestations</a></li>
+                <li class="" id="pourPros"><a data-category=".pros" href="#"><img src="https://img.icons8.com/dusk/64/000000/businessman.png"/><br>Pour les professionnels</a></li>
+                <li class="" id="pourParticuliers"><a data-category=".particuliers" href="#"><img src="https://img.icons8.com/dusk/64/000000/user-male.png"/><br>Destinés aux particuliers</a></li>
             </ul>
         </div>
         <div id="prestations" class="grid-layout grid-4-columns pt-2 grid-loaded" data-margin="30" data-margin-xs="10" data-item="grid-item" data-layout="fitRows" data-animate="fadeInUp" data-animate-delay="0">
-            <a target="_blank" class="grid-item pros particuliers grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Isolation thermique intérieur</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item pros particuliers grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Isolation thermique extérieur</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item pros grid" href="{{ path('calorifugeage') }}" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Calorifugeage</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item pros grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Matelas isolants</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item pros grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Eco régulateur</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item pros grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Économiseur d’eau</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item pros grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Organes de chauffe</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item pros grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Récupérateur de chaleur</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item particuliers grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Production d'eau chaude sanitaire</h5>
-                    </div>
-                </div>
-            </a>
-
-            <a target="_blank" class="grid-item particuliers grid" href="../home-blog-v7.html" style="padding: 0px 30px 30px 0px; position: absolute; left: 291px; top: 7.04px;">
-                <div class="grid-item-wrap">
-                    <div class="grid-image">
-                        <img alt="Polo Blog" src="{{ asset('images/isolation-scaled.jpg') }}">
-                    </div>
-                    <div class="grid-meta text-center">
-                        <h5>Pompe à chaleur</h5>
-                    </div>
-                </div>
-            </a>
+           {% include('prestationsBlock/isolationThermiqueInterieur.html.twig') %}
+           {% include('prestationsBlock/isolationThermiqueExterieur.html.twig') %}
+           {% include('prestationsBlock/calorifugeage.html.twig') %}
+           {% include('prestationsBlock/matelasIsolant.html.twig') %}
+           {% include('prestationsBlock/ecoRegulateur.html.twig') %}
+           {% include('prestationsBlock/economiseurDeau.html.twig') %}
+           {% include('prestationsBlock/organeDeChauffe.html.twig') %}
+           {% include('prestationsBlock/recuperateurChaleurGroupeFroid.html.twig') %}
+           {% include('prestationsBlock/productionEauChaudeSanitaire.html.twig') %}
+           {% include('prestationsBlock/pompeAChaleur.html.twig') %}
         </div>
 
         {#            endGrid #}

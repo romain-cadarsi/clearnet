@@ -1,0 +1,57 @@
+{% extends('prestations/pagePrestationsTemplate.html.twig') %}
+
+{% block prestation_title %}Matelas isolants{% endblock %}
+{% block prestation_description %}La pose de matelas isolant est une technique visant à renforcer les points singuliers de la plomberie,
+    c&#39;est- à-dire les brides, les soupapes, les clapets, les vannes, les filtres. Mais également ceux des
+    systèmes de chauffage. Ces points de croisement représentent une part importante dans les travaux
+    d’amélioration énergétique.{% endblock %}
+{% block fonctionnement %}La solution efficace à cette problématique est le « matelas isolant ». Il est simple et rapide, c’est une
+    housse contenant un isolant possédant une fermeture intégrée qui est installée sur ces
+    jonctions. Pour nos installations, nous avons choisi le système de fermeture de bandes auto-
+    agrippantes.{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/matelas-isolant.jpg') }}{% endblock %}
+
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/home-automation.png"/>{% endblock %}
+{% block a %}Maîtrise des températures{% endblock %}
+{% block a_desc %}Cette méthode vous permet de conserver la chaleur au sein des réseaux de plomberie et de chauffage.{% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/delete-file.png"/>{% endblock %}
+{% block b %}Aucune démarche{% endblock %}
+{% block b_desc %}Vous n'aurez aucune démarche administrative à prévoir.{% endblock %}
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/double-tick.png"/>{% endblock %}
+{% block c %}Double efficacité {% endblock %}
+{% block c_desc %}Les matelas isolant permettent une isolation des canalisations contre le chaud et mais également contre le froid{% endblock %}
+
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/module.png"/>{% endblock %}
+{% block d %}Modulable{% endblock %}
+{% block d_desc %}Lors de la pose, toutes les modifications sont possibles{% endblock %}
+
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
+{% block e %}Eligible au dispositif des CEE{% endblock %}
+{% block e_desc %}Pour financer vos travaux, vous pourrez bénéficier du programmes des CEE{% endblock %}
+
+{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/easy.png"/>{% endblock %}
+{% block f %}Facilité{% endblock %}
+{% block f_desc %}Les matériaux étant démontables, cela facilite les opérations de réparations et de maintenance{% endblock %}
+
+{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/security-lock.png"/>{% endblock %}
+{% block g %}Sécurité{% endblock %}
+{% block g_desc %}L'installation de matelas isolant garantit une meilleure sécurité pour le personnel {% endblock %}
+
+{% block h_icon %}<img src="https://img.icons8.com/dusk/128/000000/protect.png"/>{% endblock %}
+{% block h %}Ignifugé{% endblock %}
+{% block h_desc %}Le matériel posé sur le système de tuyauterie est complètement ignifugé {% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/sante.html.twig') %}
+    {% include('composantsPages/tertiaire.html.twig') %}
+    {% include('composantsPages/syndic.html.twig') %}
+    {% include('composantsPages/bailleur.html.twig') %}
+{% endblock %}
+
+{% block avantage %}
+    {% include('composantsPages/prisEnCharge.html.twig') %}
+    {% include('composantsPages/noDechet.html.twig') %}
+{% endblock %}

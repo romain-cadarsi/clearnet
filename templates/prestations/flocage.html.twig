@@ -1,0 +1,56 @@
+{% extends('prestations/sousPrestationTemplate.html.twig') %}
+
+{% block prestation_title %}Flocage{% endblock %}
+{% block prestation_description %}La technique de flocage consiste à projeter à haute pression de la laine laitière sur les plafonds et
+    planchers. Cette méthode peut être utilisée pour les professionnels comme pour les particuliers. Elle
+    supprime les ponts thermiques, et protège vos bâtiments et locaux des incendies.{% endblock %}
+{% block fonctionnement %}Le flocage est une technique d’isolation qui consiste à projeter un matériau isolant fibreux sur la
+    surface à isoler (planchers et plafonds), à l’aide d’un pistolet avec une épaisseur minimum de 12 cm
+    pour une bonne isolation thermique et phonique. L’isolant, la laine de laitier est le matériau fibreux
+    utilisé pour le flocage. Une fois projetée sur les parois à isoler, trois types de finitions sont possibles
+    selon le rendu désiré : flocage brut, flocage taloché ou flocage roulé. Cette technique permet de
+    protéger les ateliers ou bien les entrepôts contre les potentiels risques d&#39;incendies mais également
+    de bénéficier d&#39;une isolation thermique performante.{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/flocage.jpg') }}{% endblock %}
+
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/home-automation.png"/>{% endblock %}
+{% block a %}Maîtrise des températures{% endblock %}
+{% block a_desc %}Été comme hiver vous pourrez contrôler la température de votre immeuble.{% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/network.png"/>{% endblock %}
+{% block b %}Utilités multiples{% endblock %}
+{% block b_desc %}Le flocage permet la protection passive des incendies ainsi que la protection contre les attaques de rongeurs. {% endblock %}
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/economic-improvement.png"/>{% endblock %}
+{% block c %}Valorisation du parc immobilier {% endblock %}
+{% block c_desc %}Cette méthode apportera une certaine valeur ajoutée à votre bien.{% endblock %}
+
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/layers.png"/>{% endblock %}
+{% block d %}Matériaux de qualité{% endblock %}
+{% block d_desc %}Les matériaux utilisés pour le flocage sont des matériaux imputrescibles c'est-à-dire qu'ils ne peuvent pas pourrir.{% endblock %}
+
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
+{% block e %}Economie d'énergie{% endblock %}
+{% block e_desc %}Cette technique supprime les ponts thermiques et donc les pertes d’énergie. Par conséquent vous ferez des économies.{% endblock %}
+
+{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/yoga.png"/>{% endblock %}
+{% block f %}Réduction des besoins{% endblock %}
+{% block f_desc %}Les besoins en chauffage sont réduits du fait de la diminution des déperditions de chaleur.{% endblock %}
+
+{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/double-tick.png"/>{% endblock %}
+{% block g %}Double isolation{% endblock %}
+{% block g_desc %}Cette technique permet dans un premier temps, d'améliorer votre isolation thermique mais également l'isolation acoustique de votre foyer.{% endblock %}
+
+{% block h_icon %}<img src="https://img.icons8.com/dusk/128/000000/sofa.png"/>{% endblock %}
+{% block h %}Confort{% endblock %}
+{% block h_desc %}Ce procédé améliorera considérablement votre confort thermique en préservant une chaleur constante. {% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/sante.html.twig') %}
+    {% include('composantsPages/bailleur.html.twig') %}
+{% endblock %}
+
+{% block avantage %}
+    {% include('composantsPages/prisEnCharge.html.twig') %}
+{% endblock %}

@@ -20,16 +20,43 @@
         <div class="container"  data-animate="fadeInUp" data-animate-delay="0">
             <div class="row">
                 <div class="col-lg-6">
+                    <form class="widget-contact-form" novalidate="" action="{{ path('sendMail') }}" role="form" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Nom</label>
+                                <input type="text" aria-required="true" name="widget-contact-form-name" required="" class="form-control required name" placeholder="Votre nom">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" aria-required="true" name="widget-contact-form-email" required="" class="form-control required email" placeholder="Votre email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="subject">Le sujet de votre message</label>
+                                <input type="text" name="widget-contact-form-subject" required="" class="form-control required" placeholder="Sujet...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea type="text" name="widget-contact-form-message" required="" rows="5" class="form-control required" placeholder="Votre message"></textarea>
+                        </div>
+                        <!--  <div class="form-group">
+                            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                            <div class="g-recaptcha" data-sitekey="6LddCxAUAAAAAKOg0-U6IprqOZ7vTfiMNSyQT2-M"></div>
+                        </div>  -->
+                        <button class="btn" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Envoyer</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
                     <address>
                         <strong>Clearnet Energie</strong><br>
                         202 quai de Clichy<br>
                         92110 Clichy , France<br>
                         <abbr title="Numéro de téléphone"><a href="tel:0177370794"> 01.77.37.07.94</a>
                         </abbr></address>
-                </div>
-                <div class="col-lg-6">
                     <div class="image">
-                        <img src="{{ asset('images/test.jpg') }}">
+                        <img src="{{ asset('images/prestations/renovationenergetique(1).jpg') }}">
                     </div>
                 </div>
             </div>

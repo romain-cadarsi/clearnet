@@ -1,0 +1,33 @@
+{% extends('prestations/sousPrestationTemplate.html.twig') %}
+
+{% block prestation_title %}Mur extérieur{% endblock %}
+{% block prestation_description %}L’isolation des murs extérieur vous permets de réduire vos factures de chauffage jusqu’à 25 %, et
+    vous vous offrez un confort thermique optimal à la maison. ne solution très efficace pour faire des
+    économies de chauffage. La plupart des logements anciens ont échappé à toute réglementation
+    thermique. Les matériaux utilisés pour la construction sont peu performants sur le plan énergétique,
+    et font des bâtiments de véritables passoires thermiques. C’est-à-dire qu’une grande partie du
+    chauffage que vous consommez s’échappe dans les airs par l’enveloppe du bâti.{% endblock %}
+{% block fonctionnement %}Il s’agit de fixer sur les murs extérieurs des maisons un matériau qui limite les échanges d’air entre
+    l’extérieur et l’intérieur de votre logement. L’air froid ne rentre plus plein hiver et la fraicheur est
+    préservé en plein été !{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/isolation-exterieur.jpg') }}{% endblock %}
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
+{% block a %}Economie d'énergie{% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/economic-improvement.png"/>{% endblock %}
+{% block b %}Valorisation du bien immobilier {% endblock %}
+{% block b_desc %}L'isolation des murs extérieur apportera une plus-value notable à votre bien.{% endblock %}
+
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/sofa.png"/>{% endblock %}
+{% block c %}Confort{% endblock %}
+{% block c_desc %}{% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/sante.html.twig') %}
+    {% include('composantsPages/bailleur.html.twig') %}
+    {% include('composantsPages/particulier.html.twig') %}
+    {% include('composantsPages/tertiaire.html.twig') %}
+    {% include('composantsPages/syndic.html.twig') %}
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends('prestations/pagePrestationsTemplate.html.twig') %}
+
+{% block prestation_title %}Economiseur d&#39;eau{% endblock %}
+{% block prestation_description %}La consommation d&#39;eau représente l&#39;une des principales dépenses en France et il n’est pas rare de
+    rafistoler ces équipements afin d&#39;éviter l&#39;interruption partielle de nos activités. Cependant, un
+    robinet qui goutte représente jusqu&#39;à 120 litres d&#39;eau par jour en moyenne, tandis qu&#39;une chasse
+    d’eau qui fuit équivaut à plus de 600 litres par jour. Ainsi, réduire la consommation d&#39;eau devient
+    alors un enjeu majeur pour faire des économies sur vos factures mais également pour préserver au
+    mieux notre environnement en sauvegardant nos ressources naturelles.<br><br>
+    En tant qu&#39;acteur dans le secteur tertiaire vous pourrez opter pour différentes solutions et ce, à
+    différents prix.<br><br>
+    De plus en plus d&#39;électroménagers et d&#39;équipements sanitaires, se trouvant sur le marché,
+    consomment moins d&#39;eau et respectent l&#39;environnement. Cependant changer l&#39;ensemble de ces
+    équipements peut s’avérer très coûteux. Cette solution est alors idéale si vous possédez un large
+    budget.<br><br>
+    Par ailleurs, dans le cas de budget plus restreint, il est possible de réduire votre consommation d&#39;eau
+    en procédant au remplacement de certaines pièces de vos installations telles que le pommeau de
+    douche ou le régulateur de jet sur vos lavabos et éviers.{% endblock %}
+{% block fonctionnement %}Cette solution consiste en l&#39;installation de nouveaux pommeaux de douche dits hydro-économe dans
+    les salles de bains ou encore la mise en place de régulateurs de jets sur tout ou partie des points de
+    puisage de type lavabo ou évier de vos locaux. En somme, l&#39;objectif est donc la régulation du débit
+    d’eau tout en gardant une pression{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/economiseur-eau.jpg') }}{% endblock %}
+
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/refund.png"/>{% endblock %}
+{% block a %}Economique{% endblock %}
+{% block a_desc %}En remplacent vos robinets et pommeaux de douche vous économiserez jusqu'à 50 % de votre consommation d'eau{% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/good-quality.png"/>{% endblock %}
+{% block b %}Composants de haute qualité{% endblock %}
+{% block b_desc %}Nous choisissons pour votre réseau hydraulique (robinets et douches) des pièces de qualité supérieure{% endblock %}
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/winner.png"/>{% endblock %}
+{% block c %}Performance {% endblock %}
+{% block c_desc %}Avec des équipements de meilleure qualité, vous optimiserez l'efficacité de vos installations{% endblock %}
+
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
+{% block d %}Ecologique{% endblock %}
+{% block d_desc %}La réduction de votre consommation d'eau, entraîne une réduction de votre empreinte écologique en diminuant les gaz à effet de serre{% endblock %}
+
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/dashboard.png"/>{% endblock %}
+{% block e %}Régulation{% endblock %}
+{% block e_desc %}Après notre intervention, vous pourrez enfin maîtriser précisément le débit d'eau s'écoulant de vos douches et robinets{% endblock %}
+
+{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/guarantee.png"/>{% endblock %}
+{% block f %}Garantie{% endblock %}
+{% block f_desc %}Nous sommes également présents après votre projet, c'est pourquoi, nous garantissons le matériel installé pendant une durée de 2 ans {% endblock %}
+
+{% block g_icon %}{% endblock %}
+{% block g %}{% endblock %}
+{% block g_desc %}{% endblock %}
+
+{% block h_icon %}{% endblock %}
+{% block h %}{% endblock %}
+{% block h_desc %}{% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/collectivite.html.twig') %}
+    {% include('composantsPages/tertiaire.html.twig') %}
+    {% include('composantsPages/sante.html.twig') %}
+    {% include('composantsPages/sportif.html.twig') %}
+{% endblock %}
+
+{% block avantage %}
+    {% include('composantsPages/prisEnCharge.html.twig') %}
+    {% include('composantsPages/cee.html.twig') %}
+{% endblock %}

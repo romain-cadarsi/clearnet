@@ -1,47 +1,57 @@
-{% extends('prestations/pagePrestationsTemplate.html.twig') %}
+{% extends('prestations/sousPrestationTemplate.html.twig') %}
 
-{% block prestation_title %}Isolation des combles {% endblock %}
+{% block prestation_title %}Isolation des combles{% endblock %}
 {% block prestation_description %}Une maison, un bâtiment ou un local mal isolé favorise les déperditions thermiques et augmente par
-conséquent fortement les consommations de chauffage. Procéder à l&#39;isolation des combles
-permettra de réduire votre facture et de bénéficier à nouveau d&#39;un confort optimal.{% endblock %}
+    conséquent fortement les consommations de chauffage. Procéder à l&#39;isolation des combles
+    permettra de réduire votre facture et de bénéficier à nouveau d&#39;un confort optimal.{% endblock %}
 {% block fonctionnement %}Dans un premier temps, isoler ses combles est une étape clé dans la rénovation énergétique. En
     effet, pour améliorer la performance énergétique de vos bâtiments ainsi que celle de vos locaux, les
-    travaux d’isolation de combles doivent être une priorité.
+    travaux d’isolation de combles doivent être une priorité.<br><br>
     Un comble désigne l&#39;espace se trouvant entre la toiture et le dernier plancher d&#39;un bâtiment. Ils
     peuvent être définis comme &quot;combles perdus&quot; ou bien comme &quot;combles aménageable&quot;. En fonction
     de la configuration de vos lieux, différents types d&#39;isolations sont envisageables. La technique
-    d&#39;isolation par soufflage ainsi que l&#39;isolation par &quot;rampants&quot;. {% endblock %}
-{% block image_asset %}{{ asset('images/test.jpg') }}{% endblock %}
+    d&#39;isolation par soufflage ainsi que l&#39;isolation par &quot;rampants&quot;.{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/comble.jpg') }}{% endblock %}
 
 
-{% block a_icon %}key{% endblock %}
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/bell-curve.png"/>{% endblock %}
 {% block a %}Homogénéité{% endblock %}
-{% block a_desc %}Avec l'isolation de vos combles, les températures dans tous vos bâtiments seront équitablement répartis.{% endblock %}
+{% block a_desc %}Avec l'isolation de vos combles, les températures dans tous vos bâtiments seront équitablement réparties.{% endblock %}
 
-{% block b_icon %}comment-slash{% endblock %}
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/delete-file.png"/>{% endblock %}
 {% block b %}Aucune démarche{% endblock %}
-{% block b_desc %}Vous n'aurez aucune démarche administrative à prévoir.{% endblock %}
+{% block b_desc %}Vous n'aurez aucune démarche administrative à prévoir. {% endblock %}
 
-{% block c_icon %}comment-fire{% endblock %}
-{% block c %}Ignifugé{% endblock %}
-{% block c_desc %}Tous les matériaux utilisés pour l'intervention sont 100% ignifugés.{% endblock %}
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/economic-improvement.png"/>{% endblock %}
+{% block c %}Valorisation du parc immobilier {% endblock %}
+{% block c_desc %}L'isolation des combles apportera une plus-value notable à votre bien.{% endblock %}
 
-{% block d_icon %}building{% endblock %}
-{% block d %}Valorisation du parc immobilier{% endblock %}
-{% block d_desc %}L'isolation des combles apportera une plus-value notable à votre bien.{% endblock %}
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/protect.png"/>{% endblock %}
+{% block d %}Ignifugé{% endblock %}
+{% block d_desc %}Tous les matériaux utilisés pour l'intervention sont 100% ignifugés.{% endblock %}
 
-{% block e_icon %}leaf{% endblock %}
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
 {% block e %}Écologique{% endblock %}
-{% block e_desc %}Réduire ses consommations d’énergies entraîne une diminution de la production des gaz à effet de serre. L'intervention s'inscrit dans une démarche écologique{% endblock %}
+{% block e_desc %}Réduire ses consommations d’énergies entraîne une diminution de la production des gaz à effet de serre. L'intervention s'inscrit dans une démarche écologique.{% endblock %}
 
-{% block f_icon %}check-double{% endblock %}
+{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/layers.png"/>{% endblock %}
 {% block f %}Double isolation{% endblock %}
 {% block f_desc %}Cette technique permet dans un premier temps, d'améliorer votre isolation thermique mais également l'isolation acoustique de votre immeuble.{% endblock %}
 
-{% block g_icon %}gears{% endblock %}
+{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/gears.png"/>{% endblock %}
 {% block g %}Entretien{% endblock %}
 {% block g_desc %}L’amélioration de l’étanchéité de vos bâtiments à l'eau ainsi qu'à l'air permet une diminution du besoin en entretien.{% endblock %}
 
-{% block h_icon %}flag{% endblock %}
+{% block h_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
 {% block h %}Éligible au programme d'Etat{% endblock %}
 {% block h_desc %}Ce procédé est entièrement pris en charge dans le cadre du programme des CEE.{% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/sante.html.twig') %}
+    {% include('composantsPages/bailleur.html.twig') %}
+{% endblock %}
+
+{% block avantage %}
+    {% include('composantsPages/isolationGratuite.html.twig') %}
+    {% include('composantsPages/prisEnCharge.html.twig') %}
+{% endblock %}

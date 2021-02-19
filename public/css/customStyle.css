@@ -21,7 +21,7 @@
     border-radius: 15px;
     transition: all 0.5s ease;
 }
-.image img{
+.image img,img.image{
     width: 100%;
     height: auto;
     border-radius: 15px;
@@ -30,10 +30,58 @@
 .row.reverse{
     flex-direction: row-reverse;
 }
-
-.icon-box.fancy:hover i{
-    opacity: 0.4;
-}
 .icon-box.fancy .icon i {
     color: #0f954f;
+    opacity: 0.2;
+}
+.icon-box.fancy:hover i{
+    opacity: 0.5;
+}
+
+.icon-box img {
+    color: #0f954f;
+    opacity: 0.5;
+    transition: 0.5s ease;
+}
+.icon-box:hover img{
+    opacity: 0.9;
+}
+.icon-box h3, .icon-box h5 {
+    position: relative;
+    z-index: 10;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+img.fullwidth{
+    width: 100%;
+    height: auto;
+}
+
+.call-to-action{
+    border-radius: 10px;
+}
+.steps.clearfix{
+    display: none;
+}
+
+#prestation .grid-image>div{
+    width: 255px;
+    height: 170px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+}
+.portfolio-item .portfolio-image::after, .portfolio-item .portfolio-video::after, .portfolio-item .grid-image::after, .portfolio-item .grid-video::after, .portfolio-item .flickity-viewport::after, .grid-item .portfolio-image::after, .grid-item .portfolio-video::after, .grid-item .grid-image::after, .grid-item .grid-video::after, .grid-item .flickity-viewport::after {
+    border-radius: 15px;
+}
+
+@media all and(max-width: 1000px) {
+    #mainMenu nav > ul > li.mega-menu-item > .dropdown-menu {
+        width: 100%;
+    }
+
 }

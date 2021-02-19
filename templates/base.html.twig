@@ -11,6 +11,7 @@
 
     {% block css %}
         {% include('components/css.html.twig') %}
+
     {% endblock %}
 
 </head>
@@ -37,6 +38,51 @@
 
 {% block js %}
     {% include('components/js.html.twig') %}
+    <link href="{{ asset('plugins/jquery-steps/jquery.steps.css') }}" rel="stylesheet">
+    <script src="{{ asset('plugins/jquery-steps/jquery.steps.min.js') }}"></script>
+    <script>
+        $('#wizard2').steps({
+            headerTag: 'h3',
+            bodyTag: '.wizard-content',
+            enableAllSteps: true,
+            transitionEffect : $.fn.steps.transitionEffect.fade,
+            transitionEffectSpeed: '200',
+            labels: {
+                cancel: "",
+                current: "",
+                pagination: "",
+                finish: "",
+                next: "",
+                previous: "",
+                loading: ""
+            }
+        });
+
+        $('.pro').on('click',function (){
+            $('#wizard2').steps('next')
+        })
+
+        $('#wizard1').steps({
+            headerTag: 'h3',
+            bodyTag: '.wizard-content',
+            enableAllSteps: true,
+            transitionEffect : $.fn.steps.transitionEffect.fade,
+            transitionEffectSpeed: '200',
+            labels: {
+                cancel: "",
+                current: "",
+                pagination: "",
+                finish: "",
+                next: "",
+                previous: "",
+                loading: ""
+            }
+        });
+
+        $('.pro').on('click',function (){
+            $('#wizard1').steps('next')
+        })
+    </script>
 {% endblock %}
 </body>
 </html>

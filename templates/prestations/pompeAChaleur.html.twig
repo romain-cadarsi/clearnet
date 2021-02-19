@@ -1,0 +1,29 @@
+{% extends('prestations/pagePrestationsTemplate.html.twig') %}
+
+{% block prestation_title %}Pompe à chaleur{% endblock %}
+{% block prestation_description %}La pompe à chaleur est un système de chauffage et de climatisation. Il en existe une grande variété
+    de modèle ce qui fait de la pompe à chaleur un système capable de convenir à tous les types de
+    logements :
+<ul class="list-icon list-icon-arrow list-icon-colored">
+    <li>Pompe à chaleur air-air</li>
+    <li>Pompe à chaleur air-eau</li>
+    <li>Pompe à chaleur géothermique</li>
+    <li>Pompe à chaleur hydrothermique</li>
+</ul>{% endblock %}
+{% block fonctionnement %}Le principe est simple, il s’agit de récupérer la chaleur du sol ou de l’air extérieur pour la restituer à
+    l’intérieur.{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/pompeAChaleur.jpg') }}{% endblock %}
+
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/return.png"/>{% endblock %}
+{% block a %}Réversibles{% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/profit.png"/>{% endblock %}
+{% block b %}Economies d'énergie{% endblock %}
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/easy.png"/>{% endblock %}
+{% block c %}Facile d'installation{% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/particulier.html.twig') %}
+{% endblock %}

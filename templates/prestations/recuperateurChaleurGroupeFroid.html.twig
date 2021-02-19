@@ -1,0 +1,52 @@
+{% extends('prestations/pagePrestationsTemplate.html.twig') %}
+
+{% block prestation_title %}Récupérateur de chaleur sur groupe froid{% endblock %}
+{% block prestation_description %}L’énergie est un bien commun et vital qui se trouve au cœur de tous les procédés industriels. Ainsi,
+    afin d&#39;optimiser ce mécanisme de nombreuses solutions voient le jour. L&#39;une d&#39;entre elles concerne
+    la récupération de chaleur sur les groupes froids. Cette opération a pour finalité la réalisation
+    d&#39;économies d’énergie.{% endblock %}
+{% block fonctionnement %}Pour tout processus industriel de création ou de transformation, quel que soit le secteur d&#39;activité,
+    de l’énergie thermique est nécessaire. Cette dernière est définie comme chaleur utile.
+    Cependant, lors de certains procédés, la chaleur créée grâce à l&#39;énergie apportée n&#39;est pas utilisée
+    dans sa totalité. En étant rejetée dans l&#39;atmosphère, une partie de celle-ci n&#39;est alors pas exploitée.
+    Quant à cette chaleur perdue, elle est qualifiée de chaleur fatale. La bonne nouvelle est que ces
+    pertes peuvent être réutilisées grâce à la mise en place d&#39;un récupérateur de chaleur. On parle alors
+    de valorisation de la chaleur fatale.{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/recuperateur-chaleur.jpg') }}{% endblock %}
+
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/profit.png"/>{% endblock %}
+{% block a %}Economique{% endblock %}
+{% block a_desc %}En récupérant la chaleur perdue lors de procédés industriels, vous évitez le gaspillage énergétique et ainsi vous réduirez le coûts de vos consommations en électricité {% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
+{% block b %}Écologique{% endblock %}
+{% block b_desc %}En réutilisant l’énergie perdue lors d'un processus, le récupérateur de chaleur contribue à la réduction des gaz à effet de serre {% endblock %}
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/verified-account.png"/>{% endblock %}
+{% block c %}Composants de haute qualité{% endblock %}
+{% block c_desc %}Le récupérateur de chaleur installé sur le groupe froid est un matériel agréé, conforme aux normes et de qualité supérieure{% endblock %}
+
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/dashboard.png"/>{% endblock %}
+{% block d %}Performance{% endblock %}
+{% block d_desc %}Cette installation a pour but de participer à l'amélioration de la performance énergétique de vos bâtiments et locaux.{% endblock %}
+
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/guarantee.png"/>{% endblock %}
+{% block e %}Garantie{% endblock %}
+{% block e_desc %}Nous sommes également présents après votre projet, c'est pourquoi, nous garantissons le matériel installé pendant une durée de 2 ans {% endblock %}
+
+{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/scale.png"/>{% endblock %}
+{% block f %}Régulation{% endblock %}
+{% block f_desc %}Après notre intervention, vous pourrez recycler la chaleur perdue et limiter voir supprimer les surconsommations énergétiques{% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/sante.html.twig') %}
+    {% include('composantsPages/tertiaire.html.twig') %}
+    {% include('composantsPages/collectivite.html.twig') %}
+    {% include('composantsPages/sportif.html.twig') %}
+{% endblock %}
+
+{% block avantage %}
+    {% include('composantsPages/prisEnCharge.html.twig') %}
+    {% include('composantsPages/cee.html.twig') %}
+{% endblock %}

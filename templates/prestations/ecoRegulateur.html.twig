@@ -1,0 +1,58 @@
+{% extends('prestations/pagePrestationsTemplate.html.twig') %}
+
+{% block prestation_title %}Eco régulateur{% endblock %}
+{% block prestation_description %}Les organes de régulation sont essentiels au fonctionnement des systèmes de chauffage. Ce sont des
+    dispositifs mis en place afin de contrôler la température d&#39;un espace défini.<br><br>
+    Aujourd&#39;hui, les chaudières sont de plus en plus performantes et permettent de réaliser une
+    économie d’énergie allant de 15 à 20%. Toutefois, afin d&#39;optimiser leurs fonctionnements, des
+    dispositifs de régulation électroniques ont vu le jour, ayant pour but l&#39;amélioration thermique des
+    chaudières.{% endblock %}
+{% block fonctionnement %}La régulation par définition, permet de conserver une température de consigne, c&#39;est-à-dire un
+    climat ambiant dans vos bâtiments. Le plus de cette méthode est qu&#39;elle n&#39;est pas encombrante car
+    le boitier est fixé sur l&#39;installation de chaudière déjà existante.{% endblock %}
+{% block image_asset %}{{ asset('images/prestations/ecoRegulateur.png') }}{% endblock %}
+
+
+{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/brain.png"/>{% endblock %}
+{% block a %}Système intelligent{% endblock %}
+{% block a_desc %}Le système permet d'obtenir une lecture facile et direct du rendement obtenu.{% endblock %}
+
+{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/verified-account.png"/>{% endblock %}
+{% block b %}Conformité{% endblock %}
+{% block b_desc %}Les équipements utilisés respectent la norme NF-EN 12098-1 qui concerne les équipements de régulation pour les systèmes de chauffage.{% endblock %}
+
+{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/automation.png"/>{% endblock %}
+{% block c %}Entretien{% endblock %}
+{% block c_desc %}Son fonctionnement ne nécessite pas d'entretien pendant minimum 15 ans.{% endblock %}
+
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/dashboard.png"/>{% endblock %}
+{% block d %}Maîtrise des températures{% endblock %}
+{% block d_desc %}Cette méthode vous permet de conserver la chaleur au sein des réseaux de tuyauteries.{% endblock %}
+
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
+{% block e %}Economie d'énergie{% endblock %}
+{% block e_desc %}L'installation d'un éco-régulateur engendre une réduction de 20% de vos consommations d'énergie.{% endblock %}
+
+{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/scale.png"/>{% endblock %}
+{% block f %}Adaptable{% endblock %}
+{% block f_desc %}Ce dispositif est compatible avec les chaudières collectives.{% endblock %}
+
+{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/automatic.png"/>{% endblock %}
+{% block g %}Autonome{% endblock %}
+{% block g_desc %}Après l'installation, il ne sera pas nécessaire de procéder à un réglage de l'appareil. {% endblock %}
+
+{% block h_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
+{% block h %}Eligible au dispositif des CEE{% endblock %}
+{% block h_desc %}Le système est entièrement pris en charge dans le cadre du programme des CEE.{% endblock %}
+
+{% block beneficiaire %}
+    {% include('composantsPages/sante.html.twig') %}
+    {% include('composantsPages/tertiaire.html.twig') %}
+    {% include('composantsPages/syndic.html.twig') %}
+    {% include('composantsPages/bailleur.html.twig') %}
+{% endblock %}
+
+{% block avantage %}
+    {% include('composantsPages/prisEnCharge.html.twig') %}
+    {% include('composantsPages/cee.html.twig') %}
+{% endblock %}
