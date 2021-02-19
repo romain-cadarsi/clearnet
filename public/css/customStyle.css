@@ -68,18 +68,42 @@ img.fullwidth{
 }
 
 #prestation .grid-image>div{
-    width: 255px;
+    width: auto;
     height: 170px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 15px;
 }
+.service{
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom : 10px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.1);
+    transition: 0.5s ease;
+}
+.service *{
+    transition: 0.5s ease;
+}
+.service:hover{
+    background-color: #488053;
+}
+.service:hover > h4{
+    color: white;
+}
+
+.service>h4{
+    font-size: medium;
+}
 .portfolio-item .portfolio-image::after, .portfolio-item .portfolio-video::after, .portfolio-item .grid-image::after, .portfolio-item .grid-video::after, .portfolio-item .flickity-viewport::after, .grid-item .portfolio-image::after, .grid-item .portfolio-video::after, .grid-item .grid-image::after, .grid-item .grid-video::after, .grid-item .flickity-viewport::after {
     border-radius: 15px;
 }
+.close{
+    color: #0f3e68;
+}
 
-@media all and(max-width: 1000px) {
+@media all and (max-width: 1000px) {
     #mainMenu nav > ul > li.mega-menu-item > .dropdown-menu {
         width: 100%;
     }

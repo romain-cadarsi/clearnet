@@ -198,6 +198,51 @@ class WebsiteController extends AbstractController
     }
 
     /**
+     * @Route("/pro/bailleur-sociaux", name="bailleur")
+     */
+    public function bailleur(): Response
+    {
+        return $this->render('pages/bailleur.html.twig', [
+        ]);
+    }
+    /**
+     * @Route("/pro/syndic-de-copropriete", name="syndic")
+     */
+    public function syndic(): Response
+    {
+        return $this->render('pages/syndic.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/pro/collectivite", name="collectivite")
+     */
+    public function collectivite(): Response
+    {
+        return $this->render('pages/collectivite.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/pro/secteur-tertiaire", name="tertiaire")
+     */
+    public function tertiaire(): Response
+    {
+        return $this->render('pages/tertiaire.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/pro/organisme-de-sante", name="sante")
+     */
+    public function sante(): Response
+    {
+        return $this->render('pages/sante.html.twig', [
+        ]);
+    }
+
+
+    /**
      * @Route("/send-mail", name="sendMail")
      */
     public function sendMail(\Symfony\Component\HttpFoundation\Request $request,MailerInterface $mailer): Response
