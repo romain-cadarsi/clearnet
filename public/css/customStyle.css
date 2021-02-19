@@ -100,7 +100,7 @@ img.fullwidth{
     border-radius: 15px;
 }
 .close{
-    color: #0f3e68;
+    color: #0f3e68 !important;
 }
 
 @media all and (max-width: 1000px) {
