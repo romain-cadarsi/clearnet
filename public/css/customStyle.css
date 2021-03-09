@@ -6,6 +6,17 @@
  color: #5dd598;
 }
 
+.subvention{
+    border-radius: 5px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.1);
+    transition: 0.5s ease;
+}
+.subvention.cee{
+    background-color: red;
+}
+.subvention.maprimrenov{
+    background-color: green;
+}
 #logo img{
     max-height: 75px;
     width: auto;
@@ -63,9 +74,6 @@ img.fullwidth{
 .call-to-action{
     border-radius: 10px;
 }
-.steps.clearfix{
-    display: none;
-}
 
 #prestation .grid-image>div{
     width: auto;
@@ -102,10 +110,98 @@ img.fullwidth{
 .close{
     color: #0f3e68 !important;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+}
+
+.number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input>input{
+    max-width: 80px;
+    text-align:center;
+}
+.btn.btn-special{
+    background: radial-gradient(circle at left top, #003250 0%, #488053 91%);
+    background-size: 200px;
+    transition: 1s all;
+}
+.btn.btn-special:hover{
+    background-position: center;
+}
+.fullheight{
+    min-height: 100vh;
+}
+.steps.clearfix{
+    display: none;
+}
+.yellow,.yellow *,.yellow *::after,.yellow *::before{
+    color: #ffb848;
+    border-color: #ffb848;
+}
+
+.green,.green *,.green *::after,.green *::before{
+    color: #3eb87e;
+    border-color: #3eb87e;
+}
+
+.btn{
+    margin-bottom: 0 !important;
+}
+.ac-title.hidden::before{
+    display: none
+}
+.ac-item.bar-hidden{
+    border-bottom : none !important;
+}
 
 @media all and (max-width: 1000px) {
     #mainMenu nav > ul > li.mega-menu-item > .dropdown-menu {
         width: 100%;
+    }
+    #mainMenu{
+        overflow: hidden !important;
+    }
+    .wizard-content img{
+        width: 128px;
+        height: 128px;
+    }
+    .mega-menu-content{
+        padding: unset !important;
     }
 
 }

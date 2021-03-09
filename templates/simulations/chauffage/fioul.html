@@ -1,0 +1,20 @@
+<div class="text-center radio">
+
+    <div class="h4 mb-4">Quel type d'équipement au fioul est installé ?  </div>
+    <div>
+        <div class="choice-row">
+            <div class="form-group choice">
+                <input hidden type="radio" name="fioul" value="Chaudière à condensation" id="condensation">
+                <label for="condensation" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/heating-radiator.png"/><br><span>Chaudière à condensation</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="fioul" value="Chaudière autre qu'à condensation" id="autre">
+                <label for="autre" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/heating.png"/><br><span>Chaudière autre qu'à condensation</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="fioul" value="Poêle" id="poele">
+                <label for="poele" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/water-heater.png"/><br><span>Poêle</span></label>
+            </div>
+        </div>
+    </div>
+</div>

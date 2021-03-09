@@ -3,11 +3,8 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\Mailer;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
 class WebsiteController extends AbstractController
@@ -155,36 +152,40 @@ class WebsiteController extends AbstractController
     /**
      * @Route("/prestations/isolation-thermique-interieur", name="isolationThermiqueInterieur")
      */
-    public function isolationThermiqueInterieur(): Response
+    public function isolationThermiqueInterieur(Request $request): Response
     {
         return $this->render('prestations/isolationThermiqueInterieur.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
     /**
      * @Route("/prestations/isolation-thermique-exterieur", name="isolationThermiqueExterieur")
      */
-    public function isolationThermiqueExterieur(): Response
+    public function isolationThermiqueExterieur(Request $request): Response
     {
         return $this->render('prestations/isolationThermiqueExterieur.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
     /**
      * @Route("/prestations/pompe-a-chaleur", name="pompeAChaleur")
      */
-    public function pompeAChaleur(): Response
+    public function pompeAChaleur(Request $request): Response
     {
         return $this->render('prestations/pompeAChaleur.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
     /**
      * @Route("/prestations/production-eau-chaude-sanitaire", name="productionEauChaudeSanitaire")
      */
-    public function productionEauChaudeSanitaire(): Response
+    public function productionEauChaudeSanitaire(Request $request): Response
     {
         return $this->render('prestations/productionEauChaudeSanitaire.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
@@ -239,29 +240,6 @@ class WebsiteController extends AbstractController
     {
         return $this->render('pages/sante.html.twig', [
         ]);
-    }
-
-
-    /**
-     * @Route("/send-mail", name="sendMail")
-     */
-    public function sendMail(\Symfony\Component\HttpFoundation\Request $request,MailerInterface $mailer): Response
-    {
-
-        $name = $request->get('widget-contact-form-name');
-        $mail = $request->get('widget-contact-form-email');
-        $subject = $request->get('widget-contact-form-subject');
-        $message = $request->get('widget-contact-form-message');
-
-        $email = (new Email())
-            ->from('energie@clearnetgroup.fr')
-            ->subject($subject)
-            ->html("Vous avez reçu un nouveau message de la part de " . $name . " . Vous pourrez le recontacter sur son adresse mail <a href='mailto:".$mail."'> " . $mail . " : <br>" . $message)
-            ->to('cadarsir@gmail.com');
-        $email->ensureValidity();
-        $mailer->send($email);
-
-        return new JsonResponse(['response' => 'success',"message" => 'message envoyé']);
     }
 
 

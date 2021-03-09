@@ -1,0 +1,162 @@
+<section class="pb-0">
+    <div class="container">
+        <div class="heading-text heading-gradient text-center">
+            <h4><span>Quelles sont les aides dont vous pouvez bénéficier pour vos travaux de rénovations énergétiques ?</span></h4>
+        </div>
+    </div>
+</section>
+<section class=" p-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p class="text-center"><img src="https://img.icons8.com/dusk/64/000000/down-left-arrow.png"/></p>
+                <div class="call-to-action call-to-action-colored text-center">
+                    <h3>
+                        Subvention du secteur privé
+                    </h3>
+                    <img style="max-width: 100%;max-height: 80px; height: auto" src="{{ asset('images/cee-petit.png') }}"><br><br>
+                    <span onclick="$('#questcequecee').click()" class="btn btn-outline btn-light d-xl-none">?</span>
+
+                </div>
+
+
+            </div>
+            <div class="col-6">
+                <p class="text-center"><img src="https://img.icons8.com/dusk/64/000000/down-right-arrow.png"/>  </p>
+                <div class="call-to-action call-to-action-colored text-center">
+                    <h3><span>Subvention de l'état</span></h3>
+                    <img style="max-width:100%;max-height: 80px; height: auto;" src="{{ asset('images/maPrivRenov.png') }}"><br><br>
+                    <span onclick="$('#questcequemaprimrenov').click()" class="btn btn-outline btn-light d-xl-none ">?</span>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-6">
+                <div class="d-none d-xl-block container">
+                    {% include('composantsPages/questCeQueLesCee.html.twig') %}
+                </div>
+            </div>
+            <div class="col-6"><div class="d-none d-xl-block container">
+                    {% include('composantsPages/questCeQuePrimRenov.html.twig') %}
+                </div></div>
+        </div>
+
+    </div>
+</section>
+
+<section class=" p-0 justify-content-center d-xl-none">
+    <div class="container">
+        <div class="accordion accordion-simple">
+            <div class="ac-item bar-hidden">
+                <h5 class="ac-title hidden" id="questcequecee"></h5>
+                <div class="ac-content" style="display: none;">
+                    {% include('composantsPages/questCeQueLesCee.html.twig') %}
+                </div>
+            </div>
+            <div class="ac-item bar-hidden" >
+                <h5 class="ac-title hidden" id="questcequemaprimrenov"></h5>
+                <div class="ac-content" style="display: none;">
+                    {% include('composantsPages/questCeQuePrimRenov.html.twig') %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" p-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p class="text-center"><img src="https://img.icons8.com/dusk/64/000000/down-right-arrow.png"/>  </p>
+            </div>
+            <div class="col-6">
+                <p class="text-center"><img src="https://img.icons8.com/dusk/64/000000/down-left-arrow.png"/></p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-0">
+    <div class="container">
+        <div class="border-box shadow heading-text">
+            <h4 class="text-center">
+                Quels travaux entrent dans le cadre de ces aides ?
+            </h4>
+            <p>Ces aides permettent de financer les <b>travaux d’isolation, de chauffage, de ventilation ou d’audit
+                    énergétique d’une maison individuelle ou d’un appartement en habitat collectif.</b>
+                Le montant de la prime est forfaitaire. Il est <b>calculé en fonction des revenus du foyer et du gain
+                    écologique permis par les travaux</b>.</p>
+            <h4 class="text-center">
+                Qui peut en bénéficier ?
+            </h4 >
+            <ul>
+                <li><b>L&#39;ensemble des propriétaires</b>, quels que soient vos revenus, que vous occupiez votre logement
+                    ou que vous le mettiez en location.</li>
+                <li>Les <b>syndic de copropriétés, aux bailleurs sociaux, organismes de santé, aux secteurs tertiaire et
+                        aux organismes de santé</b> pour les travaux dans les parties communes.</li>
+            </ul>
+            <blockquote class="blockquote text-success">
+                <span><img src="https://img.icons8.com/dusk/64/000000/approval.png"></span><br> Les CEE et MaPrimeRenov sont des aides cumulables !
+            </blockquote>
+
+        </div>
+    </div>
+</section>
+
+<section class="background-primary">
+    <div class="container">
+        <div class="heading-text heading-gradient text-light"  data-animate="fadeInUp" data-animate-delay="0" >
+            <h4><span> Les aides des travaux de rénovation énergétique en 3 questions : </span></h4>
+        </div>
+        <div class="row">
+            <div class="col card">
+                <div class="card-content p-15">
+                    <div class="animated fadeInUp visible text-center" data-animate="fadeInUp" data-animate-delay="0">
+                        <div class="icon-box mb-0">
+                            <img src="https://img.icons8.com/dusk/128/000000/conference.png">
+                        </div>
+                        <h4>Pour qui ?</h4>
+                        <div class="w-25" style="margin:0 auto"><div class="separator m-0 "></div></div>
+
+                        <p>Les propriétaires bailleurs, occupant ou syndicat de propriété</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col card">
+                <div class="card-content p-15">
+                <div class="animated fadeInUp visible text-center" data-animate="fadeInUp" data-animate-delay="0">
+                    <div class="icon-box mb-0">
+                        <img src="https://img.icons8.com/dusk/128/000000/parliament.png">
+                    </div>
+                    <div class="green">
+                        <h4>Par qui ?</h4>
+                        <div class="w-25" style="margin:0 auto"><div class="separator m-0 "></div></div>
+                    </div>
+
+
+                    <p>L'Etat et le secteur privé</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col card">
+                <div class="card-content p-15">
+                <div class="animated fadeInUp visible text-center" data-animate="fadeInUp" data-animate-delay="0">
+                    <div class="icon-box mb-0">
+                        <img src="https://img.icons8.com/dusk/128/000000/idea.png">
+                    </div>
+                    <div class="yellow">
+                        <h4 >Pourquoi ?</h4>
+                        <div class="w-25 text-warning" style="margin:0 auto"><div class="separator m-0 "></div></div>
+                    </div>
+
+
+                    <p>Réduire les dépenses énergétiques du secteur résidentiel</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

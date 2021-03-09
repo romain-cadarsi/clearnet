@@ -1,0 +1,21 @@
+<div class="text-center radio">
+
+    <div class="h4 mb-4">Dans quelle tranche se situent les revenus fiscaux de votre foyer ? </div>
+    <label>Il s’agit du revenu de l’ensemble des membres du foyer fiscal. </label>
+    <div>
+        <div class="choice-row">
+            <div class="form-group choice">
+                <input hidden type="radio" name="budget" value="Inférieur à 30 572 €" id="faible">
+                <label for="faible" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/cash-.png"/><br><span>Inférieur à 30 572 € </span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="budget" value="Entre 30 572 € et 39 192 € " id="moyen">
+                <label for="moyen" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/paper-money.png"/><br><span>Entre 30 572 € et 39 192 € </span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="budget" value="Supérieur à 39 192 € " id="haut">
+                <label for="haut" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/money.png"/><br><span>Supérieur à 39 192 €  </span></label>
+            </div>
+        </div>
+    </div>
+</div>

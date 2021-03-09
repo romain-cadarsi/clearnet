@@ -1,0 +1,60 @@
+{% extends('base.html.twig') %}
+
+{% block menu %}
+    {% include('components/menu.html.twig') with {'notTransparent' : true, 'fullwidth' : true} %}
+{% endblock %}
+{% block content %}
+
+    <section class="fullheight row ml-0 mr-0 pb-0 pt-0" style="background-color: #f0fff3">
+        <div class="sidebar sticky-sidebar col-lg-3 d-none d-lg-block" style="box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15); background-color: white">
+            <div class="container pt-5">
+                <div class="theiaStickySidebar">
+                    <ul class="timeline">
+                        <!--Timeline item-->
+                        <li class="timeline-item projet">
+                            <div class="timeline-icon">1</div>
+                            <h5>Remplissez le formulaire</h5>
+                            <span> Le formulaire nous permettra de mieux connaitre vos attentes </span>
+                        </li>
+                        <!--end: Timeline item-->
+                        <!--Timeline item-->
+                        <li class="timeline-item informations">
+                            <div class="timeline-icon">2</div>
+                            <h5>Un conseiller vous contactera</h5>
+                            <span>Une fois votre demande reçu auprès de nos services, un conseiller vous sera attribué</span>
+                        </li>
+                        <!--end: Timeline item-->
+                        <!--Timeline item-->
+                        <li class="timeline-item contact">
+                            <div class="timeline-icon">3</div>
+                            <h5>Une pré-visite est programmée</h5>
+                            <span>Enfin, une visite sur le site concerné par les travaux est organisée selon vos disponibilitées </span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-9">
+            <div class="vertical-align card">
+                <section id="page-title" data-bg-parallax="{{ asset('images/endSimulation.jpg') }}"><div class="parallax-container img-loaded" data-bg="images/parallax/5.jpg" data-velocity="-.140" style="background: rgba(0, 0, 0, 0) url(&quot;images/parallax/5.jpg&quot;) repeat scroll 0% 0%;" data-ll-status="loaded"></div>
+                    <div class="container">
+                        <div class="page-title">
+                            <h1>Nous étudions vos informations</h1>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="heading-text heading-section text-center container-fluid">
+                        <h2>Et maintenant ? </h2>
+                        <p>Nos conseillers vous rappelleront dès que possible afin de vous informer des aides dont vous pouvez bénéficier au numéro suivant : </p>
+                        <h4>{{ numero }}</h4>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </section>
+
+
+{% endblock %}

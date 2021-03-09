@@ -1,0 +1,282 @@
+{% extends('base.html.twig') %}
+{% block css %}
+    {{ parent() }}
+    <script src="{{ asset('js/cp.js') }}"></script>
+
+    <style>
+        .choice>label{
+            border-radius: 10px;
+            margin : 10px;
+            padding: 15px;
+            transition : 0.25s all;
+            width : 200px;
+            height : 200px;
+        }
+        #wizard1 .steps.clearfix{
+            display: block;
+        }
+        .choice input ~ label span {
+            transition : 0.25s all;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+        .choice input:checked ~ label span {
+            background-color: white;
+            padding: 5px;
+            border-radius: 15px;
+        }
+
+        .choice:hover >label {
+            background-color: #c4dcc0;
+        }
+        .choice input:checked ~ label{
+            background-color: #c4dcc0;
+            color: #488053;
+            border-color:#488053 ;
+        }
+
+        .choice input{
+            position: absolute;
+            right:50px;
+            top:20px;
+        }
+        .suggestions-list{
+            list-style:none;
+            text-align: left;
+        }
+        .suggestions-list>li{
+            cursor: pointer;
+            transition : 0.25s all;
+        }
+
+        .suggestions-list>li:hover{
+            background-color : #488053;
+            color : white;
+        }
+        .choice-row{
+            display : inline-flex;
+        }
+        .choice label{
+            letter-spacing: -0.23px !important;
+            font-weight: 600 !important;
+        }
+        .timeline-item.disabled > div{
+            background-color: grey !important;
+        }
+        .timeline-item.disabled > h5{
+            color:grey;
+        }
+        .timeline-item, .timeline-item > *{
+            transition : 0.25s all;
+        }
+        #wizard1 > .steps ul li > a {
+            padding : 2px 20px;
+            max-height: 2px;
+        }
+
+        #wizard1 > .steps ul li > a .number{
+            display: none;
+        }
+        #wizard1 ul{
+            display: block;
+            width : max-content;
+            margin : 0 auto;
+        }
+        @media (max-width: 1000px){
+            .choice-row{
+                display : block;
+            }
+            .choice> label{
+                margin : 0 auto;
+            }
+            .container.container-isolation{
+                padding: unset;
+            }
+            .choice img{
+                width: 64px;
+                height: 64px;
+                float: left;
+            }
+            .choice>label{
+                height: 100px;
+            }
+            .steps.clearfix{
+                overflow: hidden;
+            }
+            input{
+                width: 100%;
+            }
+        }
+
+    </style>
+{% endblock %}
+
+{% block menu %}
+    {% include('components/menu.html.twig') with {'notTransparent' : true, 'fullwidth' : true} %}
+{% endblock %}
+{% block content %}
+
+    <section class="fullheight row ml-0 mr-0 pb-0 pt-0" style="background-color: #f0fff3">
+        <div class="sidebar sticky-sidebar col-lg-3 d-none d-lg-block" style="box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15); background-color: white">
+            <div class="container pt-5">
+                <div class="theiaStickySidebar">
+                    <ul class="timeline">
+                        <!--Timeline item-->
+                        <li class="timeline-item projet">
+                            <div class="timeline-icon">1</div>
+                            <h5>Votre projet d'isolation</h5>
+                        </li>
+                        <!--end: Timeline item-->
+                        <!--Timeline item-->
+                        <li class="timeline-item disabled informations">
+                            <div class="timeline-icon">2</div>
+                            <h5>Vos Informations</h5>
+                        </li>
+                        <!--end: Timeline item-->
+                        <!--Timeline item-->
+                        <li class="timeline-item disabled contact">
+                            <div class="timeline-icon">3</div>
+                            <h5>Prise de contact</h5>
+                        </li>
+                        <!--end: Timeline item-->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-9 container-fluid"  data-animate="fadeInUp" data-animate-delay="0">
+            <div class="vertical-align card p-30" >
+                <div class="container container-isolation" style="min-width: unset !important;">
+                    <form id="wizard1" class="wizard" method="post" >
+
+                        <h3>Type de personne</h3>
+                        <div class="wizard-content">
+                            {% include('simulations/isolation/typePersonne.html') %}
+                        </div>
+                        <h3>Type de personne</h3>
+                        <div class="wizard-content">
+                            {% include('simulations/isolation/typeMaison.html') %}
+                        </div>
+                        <h3>Type de personne</h3>
+                        <div class="wizard-content">
+                            {% include('simulations/isolation/piece.html') %}
+                        </div>
+                        <h3>Localisation</h3>
+                        <div class="wizard-content">
+                            {% include('simulations/isolation/localisation.html') %}
+                        </div>
+                        <h3>Habitants</h3>
+                        <div class="wizard-content">
+                            {% include('simulations/personnes.html.twig') %}
+                        </div>
+                        <h3>Budget</h3>
+                        <div class="wizard-content">
+                            {% include('simulations/isolation/financier.html') %}
+                        </div>
+                        <h3>InfosPerso</h3>
+                        <div class="wizard-content">
+                            {% include('simulations/isolation/infosPersonnelles.html') %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+{% endblock %}
+
+{% block js %}
+    {% include('components/js.html.twig') %}
+    <link href="{{ asset('plugins/jquery-steps/jquery.steps.css') }}" rel="stylesheet">
+    <script src="{{ asset('plugins/jquery-steps/jquery.steps.min.js') }}"></script>
+    <script src="{{ asset('js/stepsIsolation.js') }}"></script>
+    <script>
+
+        let newStep = [];
+        let toFetch = [];
+
+        $('#wizard1').steps({
+            headerTag: 'h3',
+            enableAllSteps: true,
+            transitionEffect : $.fn.steps.transitionEffect.fade,
+            transitionEffectSpeed: '10',
+            labels: {
+                cancel: "Annuler",
+                current: "Actuel",
+                pagination: "",
+                finish: "<span class='btn btn-special'>Terminer</span>",
+                next: "<span class='btn btn-primary'>Suivant</span>",
+                previous: "<span class='btn btn-light'>Précédent</span>",
+                loading: "<div class='text-center vertical-align'><div class='spinner-border text-success' role='status'> <span class='sr-only'>Loading...</span></div></div>"
+            },
+            titleTemplate : "<span class='number'>#index#</span>",
+            enableContentCache : true,
+            onStepChanged : function(event,currentIndex,priorIndex){
+                onStepChanged(currentIndex,priorIndex)
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                if(onNextStep(event,currentIndex,newIndex)){
+                    return true;
+                }
+                else{
+                    INSPIRO.elements.notification("","Assurez vous d'avoir correctement remplis le formulaire",'warning')
+                    return false;
+                }
+            },
+            onFinishing : function(){
+                if(!inputsMustNotBeEmpty()){
+                    INSPIRO.elements.notification("","Assurez vous d'avoir correctement remplis le formulaire",'warning')
+                    return false;
+                }
+                else{
+                    $('.btn-special').html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>' + $('.btn-special').html())
+                    let array = $('#wizard1').serializeArray()
+                    array.push({name: 'type_isolation', value : JSON.stringify(getPieces())})
+                    $.ajax({
+                        method: "POST",
+                        data: array ,
+                        success: function (data){
+                            window.location = data
+                        }
+                    })
+                }
+
+            }
+        });
+        $('#wizard2').steps({
+            headerTag: 'h3',
+            bodyTag: '.wizard-content',
+            enableAllSteps: true,
+            transitionEffect : $.fn.steps.transitionEffect.fade,
+            transitionEffectSpeed: '200',
+            labels: {
+                cancel: "",
+                current: "",
+                pagination: "",
+                finish: "",
+                next: "",
+                previous: "",
+                loading: ""
+            }
+        });
+
+        $('.pro').on('click',function (){
+            $('#wizard2').steps('next')
+        })
+
+
+
+        $('.pro').on('click',function (){
+            $('#wizard1').steps('next')
+        })
+
+        setTimeout(function (){
+            INSPIRO.elements.notification("",'<div class="row"><div class="col-lg-6"><div class="vertical-align"><h4 class="text-primary">Besoin d\'aide ?</h4><h3 class="text-secondary">01 77 37 07 93</h3></div></div><div class="col-lg-6"><p>(Prix d\'un appel local)</p><p>du lundi au vendredi : 9h30 - 19h30</p></div></div>','light','',20000,'bottom')
+        },5000);
+
+        let simulation = {};
+
+    </script>
+{% endblock %}

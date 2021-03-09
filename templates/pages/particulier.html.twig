@@ -2,11 +2,39 @@
 
 {% block content %}
 
-<section>
+    <section class="d-xl-none d-lg-block pb-0">
+        <div class="container">
+            <div class="row " data-animate="fadeInUp" data-animate-delay="0">
+               <div class="col-12">
+                   <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
+                       <h2><span>Je souhaite</span></h2>
+                   </div>
+               </div>
+                <div class="col-lg-12 text-center">
+                    <a href="{{ path('simulationIsolation') }}">
+                        <div class="service">
+                            <img src="https://img.icons8.com/dusk/64/000000/temperature-inside.png"/>
+                            <h4>Isoler ma maison</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <a href="{{ path('simulationChauffage') }}">
+                        <div class="service">
+                            <img src="https://img.icons8.com/dusk/64/000000/water-heater.png"/>
+                            <h4>Changer mon chauffage</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="pt-0">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-10">
-                <section class=" pb-0 pt-0">
+        <div class="row" >
+            <div class="col-xl-10">
+                <section class=" pb-0 pt-0" data-animate="fadeInUp" data-animate-delay="0">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -22,7 +50,7 @@
                                     <div class="col-lg-2">
                                         <img src="https://img.icons8.com/dusk/128/000000/user-male.png"/>
                                     </div>
-                                    <div class="col-lg-10">
+                                    <div class="col-xl-10">
                                         <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
                                             <h2><span>Particulier</span></h2>
                                             <p>Clearnet vous propose une large gamme de services :</p>
@@ -43,13 +71,13 @@
                 {% include('composantsPages/pourquoiRealiserDesTravauxEnergetiques.html.twig') %}
                 {% include('composantsPages/notreOrganisation.html.twig') %}
             </div>
-            <div class="sidebar sticky-sidebar col-lg-2">
+            <div class="sidebar sticky-sidebar col-lg-2 d-none d-xl-block">
                 <div class="theiaStickySidebar">
                     <div class="widget">
 <h4 class="widget-title">Je souhaite </h4>
                         <div class="row">
                             <div class="col-lg-12 text-center">
-                                <a href="#">
+                                <a href="{{ path('simulationIsolation') }}">
                                 <div class="service">
                                     <img src="https://img.icons8.com/dusk/64/000000/temperature-inside.png"/>
                                     <h4>Isoler ma maison</h4>
@@ -57,29 +85,29 @@
                                 </a>
                             </div>
                             <div class="col-lg-12 text-center">
-                                <a href="#">
+                                <a href="{{ path('simulationChauffage') }}">
                                 <div class="service">
                                     <img src="https://img.icons8.com/dusk/64/000000/water-heater.png"/>
                                     <h4>Changer mon chauffage</h4>
                                 </div>
                                 </a>
                             </div>
-                            <div class="col-lg-12 text-center">
-                                <a href="#">
-                                <div class="service">
-                                    <img src="https://img.icons8.com/dusk/64/000000/cash-in-hand.png"/>
-                                    <h4>Demander ma prime</h4>
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-12 text-center" >
-                                <a href="#">
-                                <div class="service">
-                                    <img src="https://img.icons8.com/dusk/64/000000/estimate.png"/>
-                                    <h4>Calculer mes aides</h4>
-                                </div>
-                                </a>
-                            </div>
+{#                            <div class="col-lg-12 text-center">#}
+{#                                <a href="#">#}
+{#                                <div class="service">#}
+{#                                    <img src="https://img.icons8.com/dusk/64/000000/cash-in-hand.png"/>#}
+{#                                    <h4>Demander ma prime</h4>#}
+{#                                </div>#}
+{#                                </a>#}
+{#                            </div>#}
+{#                            <div class="col-lg-12 text-center" >#}
+{#                                <a href="#">#}
+{#                                <div class="service">#}
+{#                                    <img src="https://img.icons8.com/dusk/64/000000/estimate.png"/>#}
+{#                                    <h4>Calculer mes aides</h4>#}
+{#                                </div>#}
+{#                                </a>#}
+{#                            </div>#}
                         </div>
                     </div>
                 </div>

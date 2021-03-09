@@ -16,7 +16,7 @@
 
 {% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/home-automation.png"/>{% endblock %}
 {% block a %}Maîtrise des températures{% endblock %}
-{% block a_desc %}Été comme hiver vous pourrez contrôler la température de votre immeuble.{% endblock %}
+{% block a_desc %}Été comme hiver vous pourrez contrôler la température de votre {% if client is defined %}maison{% else %}immeuble{% endif %}.{% endblock %}
 
 {% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/network.png"/>{% endblock %}
 {% block b %}Utilités multiples{% endblock %}
@@ -49,8 +49,8 @@
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}
     {% include('composantsPages/bailleur.html.twig') %}
+    {% include('composantsPages/particulier.html.twig') %}
 {% endblock %}
 
 {% block avantage %}
-    {% include('composantsPages/prisEnCharge.html.twig') %}
 {% endblock %}

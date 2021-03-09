@@ -1,0 +1,16 @@
+<h2>Nouvelle simulation Pro reçue </h2>
+<p>Vous avez reçu une nouvelle simulation pro de la part de {{ p.nom }} {{ p.prenom }} : </p>
+<ul>
+    <li>Secteur d'activité : {{ p.type }}</li>
+    <li>Fonction au sein de son secteur : {{ p.fonction }}</li>
+    <li>Nombre de bâtiments : {{ p.nb_batiment }}</li>
+    <li>Ont-ils plus de 2 ans ? :  {{ p.age_batiment }}</li>
+    <li>Sont-ils dotés d'un chauffage collectif ? : {{ p.chauffage_collectif }}</li>
+    <li>Date du chantier : {{ p.date | date('d/m/Y') }}</li>
+    <li>Informations supplémentaires   : {{ p.supplementaire }}</li>
+    <li>Sexe du demandeur : {{ p.sexe }}</li>
+    <li>Prénom : {{ p.prenom }}</li>
+    <li>Nom : {{ p.nom }}</li>
+    <li>Téléphone : {{ p.telephone }}</li>
+    <li>Email : <a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+</ul>

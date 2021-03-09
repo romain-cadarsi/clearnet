@@ -1,0 +1,15 @@
+<div class="text-center radio">
+    <div class="h4 mb-4">Votre logement a-t-il plus de 2 ans ? </div>
+    <div>
+        <div class="choice-row text-center">
+            <div class="form-group choice">
+                <input hidden type="radio" name="anciennete_bien" value="Moins de 3 ans" id="new">
+                <label for="new" onclick="window.location = '{{ path('nonEligible') }}'"><img src="https://img.icons8.com/dusk/128/000000/multiply.png"/><br><span>Non</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="anciennete_bien" value="Plus de 3 ans" id="old">
+                <label for="old" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/checkmark.png"/><br><span>Oui</span></label>
+            </div>
+        </div>
+    </div>
+</div>

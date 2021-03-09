@@ -1,0 +1,25 @@
+<h2>Nouvelle simulation d'isolation reçue </h2>
+<p>Vous avez reçu une nouvelle simulation d'isolation de la part de {{ p.nom }} {{ p.prenom }} : </p>
+<ul>
+    <li>Type de personne : {{ p.type_personne }}</li>
+    <li>Type de bien : {{ p.type_bien }}</li>
+    <li>Type d'isolation recherché :
+        <ul>
+            {% for isolation in p.type_isolation %}
+            <li>{{ isolation }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% if p.combles_type is not null %}<li>Type de combles : {{ p.combles_type }}</li>{% endif %}
+    {% if p.isolation_comble is not null %}<li>Surface totale de combles à isoler : {{ p.isolation_comble }} m²</li>{% endif %}
+    {% if p.sous_sol is not null %}<li>Surface totale de sous-sol à isoler : {{ p.sous_sol }} m²</li>{% endif %}
+    {% if p.vide_sanitaire is not null %}<li>Hauteur du vide-sanitaire : {{ p.vide_sanitaire }} cm</li>{% endif %}
+    {% if p.combles_type is not null %}<li>Type de combles : {{ p.combles_type }}</li>{% endif %}
+    <li>Code postal  : {{ p.code_postal }}</li>
+    <li>Nombres de personnes dans le logement : {{ p.quantite_personne }}</li>
+    <li>Revenus fiscaux du foyer : {{ p.budget }}</li>
+    <li>Sexe du demandeur : {{ p.sexe }}</li>
+    <li>Prénom : {{ p.prenom }}</li>
+    <li>Nom : {{ p.nom }}</li>
+    <li>Téléphone : {{ p.telephone }}</li>
+</ul>

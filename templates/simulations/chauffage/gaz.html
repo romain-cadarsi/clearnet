@@ -1,0 +1,24 @@
+<div class="text-center radio">
+
+    <div class="h4 mb-4">  Quel type d'équipement au gaz est installé ?  </div>
+    <div>
+        <div class="choice-row">
+            <div class="form-group choice">
+                <input hidden type="radio" name="gaz" value="Chaudière à condensation" id="chaudiereCondensation">
+                <label for="chaudiereCondensation" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/gas.png"/><br><span>Chaudière à condensation</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="gaz" value="Chaudière autre qu'à condensation" id="chaudiereAutre">
+                <label for="chaudiereAutre" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/heating.png"/><br><span>Chaudière autre qu'à condensation</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="gaz" value="Radiateur au gaz" id="radiateur">
+                <label for="radiateur" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/heating-radiator.png"/><br><span>Radiateur au gaz</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="gaz" value="Poêle au gaz" id="poele">
+                <label for="poele" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/water-heater.png"/><br><span>Poêle au gaz</span></label>
+            </div>
+        </div>
+    </div>
+</div>

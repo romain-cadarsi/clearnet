@@ -1,4 +1,4 @@
-<header id="header" data-transparent="true">
+<header id="header" {% if notTransparent is defined %}{% else %}data-transparent="true" {% endif %} {% if fullwidth is defined %}data-fullwidth="true"{% else %}{% endif %}>
     <div class="header-inner">
         <div class="container">
 

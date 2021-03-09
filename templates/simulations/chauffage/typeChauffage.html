@@ -1,0 +1,33 @@
+<div class="text-center radio">
+    <div class="h4 mb-4"> Quelle est l’énergie de chauffage actuelle de votre logement ?  </div>
+    <label>Si vous avez plusieurs énergies de chauffage, indiquez-nous la principale </label>
+    <div>
+        <div class="choice-row text-center row">
+            <div class="form-group choice col-lg-4">
+                <input hidden type="radio" name="type_chauffage" value="Chauffage au fioul" id="fioul">
+                <label for="fioul" onclick="setTimeout(function(){$('#wizard1').steps('next')},200);toFetch = 'fioul'"><img src="https://img.icons8.com/dusk/128/000000/petrol.png"/><br><span>Chauffage au Fioul </span></label>
+            </div>
+            <div class="form-group choice col-lg-4">
+                <input hidden type="radio" name="type_chauffage" value="Chauffage électrique" id="elec">
+                <label for="elec" onclick="setTimeout(function(){$('#wizard1').steps('next')},200);toFetch = 'elec'"><img src="https://img.icons8.com/dusk/128/000000/electricity.png"/><br><span>Chauffage Electrique</span></label>
+            </div>
+            <div class="form-group choice col-lg-4">
+                <input hidden type="radio" name="type_chauffage" value="Chauffage au gaz" id="gaz">
+                <label for="gaz" onclick="setTimeout(function(){$('#wizard1').steps('next')},200);toFetch = 'gaz'"><img src="https://img.icons8.com/dusk/128/000000/gas-industry.png"/><br><span>Chauffage au gaz</span></label>
+            </div>
+            <div class="form-group choice col-lg-4">
+                <input hidden type="radio" name="type_chauffage" value="Chauffage au bois" id="bois">
+                <label for="bois" onclick="setTimeout(function(){$('#wizard1').steps('next')},200);toFetch = ''"><img src="https://img.icons8.com/dusk/128/000000/wood.png"/><br><span>Chauffage au bois</span></label>
+            </div>
+            <div class="form-group choice col-lg-4">
+                <input hidden type="radio" name="type_chauffage" value="Pompe à chaleur" id="pompe">
+                <label for="pompe" onclick="setTimeout(function(){$('#wizard1').steps('next')},200);toFetch = ''"><img src="https://img.icons8.com/dusk/128/000000/compressor.png"/><br><span>Pompe à chaleur</span></label>
+            </div>
+            <div class="form-group choice col-lg-4">
+                <input hidden type="radio" name="type_chauffage" value="Chauffage au charbon" id="charbon">
+                <label for="charbon" onclick="setTimeout(function(){$('#wizard1').steps('next')},200);toFetch = ''"><img src="https://img.icons8.com/dusk/128/000000/charcoal.png"/><br><span>Chauffage au charbon</span></label>
+            </div>
+
+        </div>
+    </div>
+</div>

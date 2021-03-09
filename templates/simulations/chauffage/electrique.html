@@ -1,0 +1,20 @@
+<div class="text-center radio">
+
+    <div class="h4 mb-4"> Quel type d'équipement électrique est installé ?   </div>
+    <div>
+        <div class="choice-row">
+            <div class="form-group choice">
+                <input hidden type="radio" name="electrique" value="Chaudière électrique" id="chaudiere">
+                <label for="chaudiere" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/heating.png"/><br><span>Chaudière électrique</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="electrique" value="Plafonds ou planchers chauffants" id="plancher">
+                <label for="plancher" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/temperature-inside.png"/><br><span>Plafonds ou planchers chauffants </span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="electrique" value="Radiateur Electrique" id="radiateur">
+                <label for="radiateur" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/heating-radiator.png"/><br><span>Radiateur électrique</span></label>
+            </div>
+        </div>
+    </div>
+</div>

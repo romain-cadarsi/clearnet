@@ -26,32 +26,28 @@
 {% block c %}Valorisation du parc immobilier {% endblock %}
 {% block c_desc %}L'isolation des combles apportera une plus-value notable à votre bien.{% endblock %}
 
-{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/protect.png"/>{% endblock %}
-{% block d %}Ignifugé{% endblock %}
-{% block d_desc %}Tous les matériaux utilisés pour l'intervention sont 100% ignifugés.{% endblock %}
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
+{% block d %}Écologique{% endblock %}
+{% block d_desc %}Réduire ses consommations d’énergies entraîne une diminution de la production des gaz à effet de serre. L'intervention s'inscrit dans une démarche écologique.{% endblock %}
 
-{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block e %}Écologique{% endblock %}
-{% block e_desc %}Réduire ses consommations d’énergies entraîne une diminution de la production des gaz à effet de serre. L'intervention s'inscrit dans une démarche écologique.{% endblock %}
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/layers.png"/>{% endblock %}
+{% block e %}Double isolation{% endblock %}
+{% block e_desc %}Cette technique permet dans un premier temps, d'améliorer votre isolation thermique mais également l'isolation acoustique de votre {% if client is defined %}maison{% else %}immeuble{% endif %}.{% endblock %}
 
-{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/layers.png"/>{% endblock %}
-{% block f %}Double isolation{% endblock %}
-{% block f_desc %}Cette technique permet dans un premier temps, d'améliorer votre isolation thermique mais également l'isolation acoustique de votre immeuble.{% endblock %}
+{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/gears.png"/>{% endblock %}
+{% block f %}Entretien{% endblock %}
+{% block f_desc %}L’amélioration de l’étanchéité de vos bâtiments à l'eau ainsi qu'à l'air permet une diminution du besoin en entretien.{% endblock %}
 
-{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/gears.png"/>{% endblock %}
-{% block g %}Entretien{% endblock %}
-{% block g_desc %}L’amélioration de l’étanchéité de vos bâtiments à l'eau ainsi qu'à l'air permet une diminution du besoin en entretien.{% endblock %}
-
-{% block h_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
-{% block h %}Éligible au programme d'Etat{% endblock %}
-{% block h_desc %}Ce procédé est entièrement pris en charge dans le cadre du programme des CEE.{% endblock %}
+{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
+{% block g %}Éligible au programme d'Etat{% endblock %}
+{% block g_desc %}Ce procédé est entièrement pris en charge dans le cadre du programme des CEE.{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}
     {% include('composantsPages/bailleur.html.twig') %}
+    {% include('composantsPages/particulier.html.twig') %}
 {% endblock %}
 
 {% block avantage %}
     {% include('composantsPages/isolationGratuite.html.twig') %}
-    {% include('composantsPages/prisEnCharge.html.twig') %}
 {% endblock %}

@@ -1,0 +1,32 @@
+<div class="text-center text">
+
+    <div class="h4 mb-4">Où se situe le logement concerné par les travaux ? </div>
+    <div>
+        <div class="">
+            <div class="form-group">
+                <div class="">
+                    <input required id="code" name="code_postal" placeholder="Code postal ou Nom de la ville"><a href="#" class="btn btn-primary"><span class="fa fa-search"></span></a>
+                </div>
+                <ul class="suggestions-list" onclick="next()">
+                    <li data-vicopo="#ville, #code" data-vicopo-click='{"#code": "code - ville"}' >
+                        <strong data-vicopo-code-postal></strong>
+                        <span data-vicopo-ville></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $(window).keydown(function(event){
+            if(event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+            }
+        });
+    });
+    $('.suggestions-list').children().on('click',function(){
+        $('#wizard1').steps('next');
+    })
+</script>

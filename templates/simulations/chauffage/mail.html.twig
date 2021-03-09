@@ -1,0 +1,21 @@
+<h2>Nouvelle simulation d'isolation reçue </h2>
+<p>Vous avez reçu une nouvelle simulation de changement de chauffage de la part de {{ p.nom }} {{ p.prenom }} : </p>
+<ul>
+    <li>Type de personne : {{ p.type_personne }}</li>
+    <li>Type de bien : {{ p.type_bien }}</li>
+    <li>Ancienneté du bien : {{ p.anciennete_bien }}</li>
+    <li>Type de chauffage :  {{ p.type_chauffage }}</li>
+    {% for precision in p.precision %}
+        {% if precision is not null %}
+            <li>Précision sur le type de chauffage utilisé :  {{ precision }}</li>
+        {% endif %}
+    {% endfor %}
+    <li>Surface habitable du logement : {{ p.surface_habitable }}</li>
+    <li>Code postal  : {{ p.code_postal }}</li>
+    <li>Nombres de personnes dans le logement : {{ p.quantite_personne }}</li>
+    <li>Revenus fiscaux du foyer : {{ p.budget }}</li>
+    <li>Sexe du demandeur : {{ p.sexe }}</li>
+    <li>Prénom : {{ p.prenom }}</li>
+    <li>Nom : {{ p.nom }}</li>
+    <li>Téléphone : {{ p.telephone }}</li>
+</ul>

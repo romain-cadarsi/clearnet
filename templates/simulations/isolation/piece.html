@@ -1,0 +1,25 @@
+<div class="text-center radio pieces">
+
+    <div class="h4 mb-4">Que souhaitez-vous isoler ? </div>
+    <p>Vous pouvez sélectionner plusieurs espaces à isoler à la fois</p>
+    <div>
+        <div class="choice-row">
+            <div class="form-group choice">
+                <input hidden type="checkbox" name="type_isolation" value="Combles" id="combles" onclick="addToFetch(event,'combles')">
+                <label for="combles"><img src="https://img.icons8.com/dusk/128/000000/roofing.png"/><br><span>Des combles</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="checkbox" name="type_isolation" value="Garage" id="garage" onclick="addToFetch(event,'garage_sous_sol')">
+                <label for="garage"><img src="https://img.icons8.com/dusk/128/000000/garage.png"/><br><span>Un garage</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="checkbox" name="type_isolation" value="Cave" id="cave" onclick="addToFetch(event,'garage_sous_sol')">
+                <label for="cave"><img src="https://img.icons8.com/dusk/128/000000/stairs-down.png"/><br><span>Une cave ou un sous-sol</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="checkbox" name="type_isolation" value="Vide sanitaire" id="vide_sanitaire" onclick="addToFetch(event,'vide_sanitaire')">
+                <label for="vide_sanitaire"><img src="https://img.icons8.com/dusk/128/000000/home.png"/><br><span>Un vide sanitaire</span></label>
+            </div>
+        </div>
+    </div>
+</div>

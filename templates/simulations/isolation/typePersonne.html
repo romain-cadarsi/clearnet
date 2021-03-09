@@ -1,0 +1,15 @@
+<div class="text-center radio">
+    <div class="h4 mb-4">Dans ce logement, vous êtes :  </div>
+    <div>
+        <div class="choice-row text-center">
+            <div class="form-group choice">
+                <input hidden type="radio" name="type_personne" value="Proprietaire" id="proprietaire">
+                <label for="proprietaire" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/person-at-home.png"/><br><span>Propriétaire</span></label>
+            </div>
+            <div class="form-group choice">
+                <input hidden type="radio" name="type_personne" value="Locataire" id="locataire">
+                <label for="locataire" onclick="setTimeout(function(){$('#wizard1').steps('next')},200)"><img src="https://img.icons8.com/dusk/128/000000/agreement.png"/><br><span>Locataire</span></label>
+            </div>
+        </div>
+    </div>
+</div>
