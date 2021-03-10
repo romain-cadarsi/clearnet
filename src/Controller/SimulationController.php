@@ -39,10 +39,10 @@ class SimulationController extends AbstractController
                 'telephone' => $request->get('telephone'),
             ];
             $email = (new Email())
-                ->from('energie@clearnetgroup.fr')
+                ->from('contact@clearnet-energie.fr')
                 ->subject("Nouvelle simulation d'isolation")
                 ->html($this->renderView("simulations/isolation/mail.html.twig",['p' => $param]))
-                ->to('energie@clearnetgroup.fr');
+                    ->to('contact@clearnet-energie.fr');
             $email->ensureValidity();
             $mailer->send($email);
             return new Response($this->generateUrl('endSimulationIsolation',['numero' => $param['telephone']],UrlGeneratorInterface::ABSOLUTE_URL));
@@ -75,10 +75,10 @@ class SimulationController extends AbstractController
                 'email' => $request->get('email'),
             ];
             $email = (new Email())
-                ->from('energie@clearnetgroup.fr')
+                ->from('contact@clearnet-energie.fr')
                 ->subject("Nouvelle simulation Pro")
                 ->html($this->renderView("simulations/pro/mail.html.twig",['p' => $param]))
-                ->to('energie@clearnetgroup.fr');
+                ->to('contact@clearnet-energie.fr');
             $email->ensureValidity();
             $mailer->send($email);
             return new Response($this->generateUrl('endSimulationPro',['numero' => $param['telephone']],UrlGeneratorInterface::ABSOLUTE_URL));
@@ -180,10 +180,10 @@ class SimulationController extends AbstractController
                 'telephone' => $request->get('telephone'),
             ];
             $email = (new Email())
-                ->from('energie@clearnetgroup.fr')
+                ->from('contact@clearnet-energie.fr')
                 ->subject("Nouvelle simulation de changement de chauffage")
                 ->html($this->renderView("simulations/chauffage/mail.html.twig",['p' => $param]))
-                ->to('energie@clearnetgroup.fr');
+                ->to('contact@clearnet-energie.fr');
             $email->ensureValidity();
             $mailer->send($email);
             return new Response($this->generateUrl('endSimulationChauffage',['numero' => $param['telephone']],UrlGeneratorInterface::ABSOLUTE_URL));
@@ -207,10 +207,10 @@ class SimulationController extends AbstractController
         $message = $request->get('widget-contact-form-message');
 
         $email = (new Email())
-            ->from('energie@clearnetgroup.fr')
+            ->from('contact@clearnet-energie.fr')
             ->subject($subject)
             ->html("Vous avez reçu un nouveau message de la part de $name <b>Vous pourrez le recontacter sur son adresse mail <a href='mailto:$mail'> $mail</a>  : <br> <b>$message<b>")
-            ->to('energie@clearnetgroup.fr');
+            ->to('contact@clearnet-energie.fr');
         $email->ensureValidity();
         $mailer->send($email);
 
