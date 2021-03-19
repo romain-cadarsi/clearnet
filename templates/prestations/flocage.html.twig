@@ -46,11 +46,12 @@
 {% block h %}Confort{% endblock %}
 {% block h_desc %}Ce procédé améliorera considérablement votre confort thermique en préservant une chaleur constante. {% endblock %}
 
+{% block i_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
+{% block i %}Eligible au programme de l'Etat{% endblock %}
+{% block i_desc %}{% endblock %}
+
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}
     {% include('composantsPages/bailleur.html.twig') %}
     {% include('composantsPages/particulier.html.twig') %}
-{% endblock %}
-
-{% block avantage %}
 {% endblock %}

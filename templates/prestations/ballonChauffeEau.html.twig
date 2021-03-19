@@ -1,6 +1,6 @@
 {% extends('prestations/sousPrestationTemplate.html.twig') %}
 
-{% block prestation_title %}Ballon chauffe-eau thermodynamique{% endblock %}
+{% block prestation_title %}Ballon thermodynamique{% endblock %}
 {% block prestation_description %}Le chauffe-eau thermodynamique est un équipement qui permet
 d’offrir une solution performante et économique pour subvenir aux
 besoins en eau chaude sanitaire de toute la maison.{% endblock %}
@@ -20,9 +20,17 @@ besoins en eau chaude sanitaire de toute la maison.{% endblock %}
 {% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
 {% block c %}Ecologique{% endblock %}
 
-{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
-{% block d %}Aide de l’Etat MaPrimeRenov{% endblock %}
+{% block d_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
+{% block d %}Eligible au programme de l'Etat{% endblock %}
+{% block d_desc %}{% endblock %}
+
+{% block e_icon %}<img src="{{ asset('images/maPrimRenov128.png') }}"/>{% endblock %}
+{% block e %}MaPrimRénov'{% endblock %}
+{% block e_desc %}Vous pouvez béneficier de maPrimRénov' si vous êtes particulier{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/particulier.html.twig') %}
 {% endblock %}
+
+
+

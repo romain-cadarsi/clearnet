@@ -41,9 +41,9 @@
 {% block g %}Autonome{% endblock %}
 {% block g_desc %}Après l'installation, il ne sera pas nécessaire de procéder à un réglage de l'appareil. {% endblock %}
 
-{% block h_icon %}<img src="https://img.icons8.com/dusk/128/000000/france.png"/>{% endblock %}
-{% block h %}Eligible au dispositif des CEE{% endblock %}
-{% block h_desc %}Le système est entièrement pris en charge dans le cadre du programme des CEE.{% endblock %}
+{% block h_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
+{% block h %}Eligible au programme de l'Etat{% endblock %}
+{% block h_desc %}{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}
@@ -52,6 +52,23 @@
     {% include('composantsPages/bailleur.html.twig') %}
 {% endblock %}
 
-{% block avantage %}
-    {% include('composantsPages/cee.html.twig') %}
+{% block avantageSection %}
+    <section class="p-t-100 pb-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
+                        <h2><span>Avantages de cette prestation </span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row text-center">
+                {% include('composantsPages/cee.html.twig') %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

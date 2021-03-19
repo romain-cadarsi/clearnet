@@ -171,7 +171,7 @@
                         </div>
                         <h3>Budget</h3>
                         <div class="wizard-content">
-                            {% include('simulations/isolation/financier.html') %}
+                            {% include('simulations/isolation/financier.html.twig') %}
                         </div>
                         <h3>InfosPerso</h3>
                         <div class="wizard-content">
@@ -191,7 +191,7 @@
     {% include('components/js.html.twig') %}
     <link href="{{ asset('plugins/jquery-steps/jquery.steps.css') }}" rel="stylesheet">
     <script src="{{ asset('plugins/jquery-steps/jquery.steps.min.js') }}"></script>
-    <script src="{{ asset('js/stepsIsolation.js') }}"></script>
+    <script src="{{ asset('js/stepsPro.js') }}"></script>
     <script>
 
         let newStep = [];

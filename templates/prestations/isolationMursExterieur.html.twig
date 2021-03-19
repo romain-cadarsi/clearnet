@@ -24,6 +24,22 @@
 {% block c %}Confort{% endblock %}
 {% block c_desc %}{% endblock %}
 
+{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/easy.png"/>{% endblock %}
+{% block d %}Aucune démarche{% endblock %}
+{% block d_desc %}{% endblock %}
+
+{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/recycle.png"/>{% endblock %}
+{% block e %}Ecologique{% endblock %}
+{% block e_desc %}{% endblock %}
+
+{% block f_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
+{% block f %}Eligible au programme de l'Etat{% endblock %}
+{% block f_desc %}{% endblock %}
+
+{% block g_icon %}<img src="{{ asset('images/maPrimRenov128.png') }}"/>{% endblock %}
+{% block g %}MaPrimRénov'{% endblock %}
+{% block g_desc %}Vous pouvez béneficier de maPrimRénov' si vous êtes particulier{% endblock %}
+
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}
     {% include('composantsPages/bailleur.html.twig') %}
@@ -31,3 +47,4 @@
     {% include('composantsPages/tertiaire.html.twig') %}
     {% include('composantsPages/syndic.html.twig') %}
 {% endblock %}
+

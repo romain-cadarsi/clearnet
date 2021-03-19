@@ -22,6 +22,9 @@
 {% block c %}Economie d'énergie{% endblock %}
 {% block c_desc %}Équilibrer son système hydraulique offre la possibilité de gérer efficacement l’apport des puissances en tout point d’une installation. Elle permet de ne dépenser que les quantités d’énergie nécessaires à vos besoins, le gaspillage et la surconsommation inutile sont alors supprimés.{% endblock %}
 
+{% block d_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
+{% block d %}Eligible au programme de l'Etat{% endblock %}
+{% block d_desc %}{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}
@@ -30,5 +33,3 @@
     {% include('composantsPages/bailleur.html.twig') %}
 {% endblock %}
 
-{% block avantage %}
-{% endblock %}
