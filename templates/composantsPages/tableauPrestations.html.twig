@@ -3,24 +3,39 @@
         {#            Debut grid#}
         <div class="grid-filter text-center mt-5 mb-5" data-layout="#prestations" data-animate="fadeInUp" data-animate-delay="0">
             <ul>
-                <li class="" id="pourTous"><a href="#" data-category="*"><img src="https://img.icons8.com/dusk/64/000000/conference.png"/><br> Toutes les prestations</a></li>
+                <li class="" id="pourTous"><a href="#" data-category=".both"><img src="https://img.icons8.com/dusk/64/000000/conference.png"/><br> Toutes les prestations</a></li>
                 <li class="" id="pourPros"><a data-category=".pros" href="#"><img src="https://img.icons8.com/dusk/64/000000/businessman.png"/><br>Pour les professionnels</a></li>
                 <li class="" id="pourParticuliers"><a data-category=".particuliers" href="#"><img src="https://img.icons8.com/dusk/64/000000/user-male.png"/><br>Destinés aux particuliers</a></li>
             </ul>
         </div>
         <div id="prestations" class="grid-layout grid-4-columns pt-2 grid-loaded" data-margin="30" data-margin-xs="10" data-item="grid-item" data-layout="fitRows" data-animate="fadeInUp" data-animate-delay="0">
-           {% include('prestationsBlock/isolationThermiqueInterieur.html.twig') %}
-           {% include('prestationsBlock/isolationThermiqueExterieur.html.twig') %}
-           {% include('prestationsBlock/calorifugeage.html.twig') %}
-           {% include('prestationsBlock/matelasIsolant.html.twig') %}
-           {% include('prestationsBlock/ecoRegulateur.html.twig') %}
-           {% include('prestationsBlock/economiseurDeau.html.twig') %}
-           {% include('prestationsBlock/organeDeChauffe.html.twig') %}
-           {% include('prestationsBlock/recuperateurChaleurGroupeFroid.html.twig') %}
-           {% include('prestationsBlock/productionEauChaudeSanitaire.html.twig') %}
-           {% include('prestationsBlock/pompeAChaleur.html.twig') %}
-        </div>
+           {% include('prestationsBlock/both/isolationThermiqueInterieur.html.twig') %}
+           {% include('prestationsBlock/both/isolationThermiqueExterieur.html.twig') %}
+           {% include('prestationsBlock/both/calorifugeage.html.twig') %}
+           {% include('prestationsBlock/both/matelasIsolant.html.twig') %}
+           {% include('prestationsBlock/both/ecoRegulateur.html.twig') %}
+           {% include('prestationsBlock/both/economiseurDeau.html.twig') %}
+           {% include('prestationsBlock/both/organeDeChauffe.html.twig') %}
+           {% include('prestationsBlock/both/recuperateurChaleurGroupeFroid.html.twig') %}
+           {% include('prestationsBlock/both/productionEauChaudeSanitaire.html.twig') %}
+           {% include('prestationsBlock/both/pompeAChaleur.html.twig') %}
+            {% include('prestationsBlock/pro/isolationThermiqueExterieur.html.twig') %}
+            {% include('prestationsBlock/pro/calorifugeage.html.twig') %}
+            {% include('prestationsBlock/pro/matelasIsolant.html.twig') %}
+            {% include('prestationsBlock/pro/ecoRegulateur.html.twig') %}
+            {% include('prestationsBlock/pro/economiseurDeau.html.twig') %}
+            {% include('prestationsBlock/pro/organeDeChauffe.html.twig') %}
+            {% include('prestationsBlock/pro/recuperateurChaleurGroupeFroid.html.twig') %}
 
+            {% include('prestationsBlock/particulier/isolationThermiqueInterieur.html.twig') %}
+            {% include('prestationsBlock/particulier/isolationThermiqueExterieur.html.twig') %}
+            {% include('prestationsBlock/particulier/productionEauChaudeSanitaire.html.twig') %}
+            {% include('prestationsBlock/particulier/pompeAChaleur.html.twig') %}
+
+        </div>
+        <script>$(window).load(function(){
+                $('#pourTous').children().click()
+            })</script>
         {#            endGrid #}
 
     </div>

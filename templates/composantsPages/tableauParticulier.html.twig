@@ -2,10 +2,9 @@
     <div class="container">
         {#            Debut grid#}
         <div id="prestations" class="grid-layout grid-4-columns pt-2 grid-loaded" data-margin="30" data-margin-xs="10" data-item="grid-item" data-layout="fitRows" data-animate="fadeInUp" data-animate-delay="0">
-            {% include('prestationsBlock/isolationThermiqueInterieur.html.twig') %}
-            {% include('prestationsBlock/isolationThermiqueExterieur.html.twig') %}
-            {% include('prestationsBlock/productionEauChaudeSanitaire.html.twig') %}
-            {% include('prestationsBlock/pompeAChaleur.html.twig') %}
+            {% include('prestationsBlock/particulier/isolationThermiqueExterieur.html.twig') %}
+            {% include('prestationsBlock/particulier/productionEauChaudeSanitaire.html.twig') %}
+            {% include('prestationsBlock/particulier/pompeAChaleur.html.twig') %}
         </div>
         {#            endGrid #}
 
