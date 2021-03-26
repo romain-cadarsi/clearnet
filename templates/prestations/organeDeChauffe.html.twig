@@ -9,22 +9,12 @@
     minutieusement celui-ci car beaucoup de logements/locaux peuvent en dépendre.{% endblock %}
 {% block image_asset %}{{ asset('images/prestations/organe-de-chauffe.jpg') }}{% endblock %}
 
+{% block avantage %}
+    {% include('prestations/block/bienEtre.html') %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/cee.html.twig') %}
+{% endblock %}
 
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/show-property.png"/>{% endblock %}
-{% block a %}Contrôle{% endblock %}
-{% block a_desc %}La présence d'un système d'équilibrage hydraulique permet de mesurer : le débit, la différence de pression ou la température à n'importe quel point du réseau. De cette manière, le bon fonctionnement de l'équipement peut être vérifié. Toutefois, si un dysfonctionnement apparaît, le composant à l'origine du problème peut être détecté avec précision.{% endblock %}
-
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/sofa.png"/>{% endblock %}
-{% block b %}Confort{% endblock %}
-{% block b_desc %}Nombreux sont les bâtiments/locaux qui possèdent un déséquilibre au niveau des circuits hydraulique, c'est-à-dire que , dans un même immeuble, aucun local n'affichera la même température. Une pièce sera surchauffée, l'autre pièce ne le sera pas assez. Régler les organes de chauffe de vos bâtiments et de vos locaux permet de distribuer équitablement, à toutes vos installations, la quantité de chaleur nécessaire à vos besoins.{% endblock %}
-
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block c %}Economie d'énergie{% endblock %}
-{% block c_desc %}Équilibrer son système hydraulique offre la possibilité de gérer efficacement l’apport des puissances en tout point d’une installation. Elle permet de ne dépenser que les quantités d’énergie nécessaires à vos besoins, le gaspillage et la surconsommation inutile sont alors supprimés.{% endblock %}
-
-{% block d_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
-{% block d %}Eligible au programme de l'Etat{% endblock %}
-{% block d_desc %}{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}

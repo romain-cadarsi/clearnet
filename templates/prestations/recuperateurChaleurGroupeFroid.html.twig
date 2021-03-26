@@ -14,34 +14,13 @@
     de valorisation de la chaleur fatale.{% endblock %}
 {% block image_asset %}{{ asset('images/prestations/recuperateur-chaleur.jpg') }}{% endblock %}
 
-
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/profit.png"/>{% endblock %}
-{% block a %}Economique{% endblock %}
-{% block a_desc %}En récupérant la chaleur perdue lors de procédés industriels, vous évitez le gaspillage énergétique et ainsi vous réduirez le coûts de vos consommations en électricité {% endblock %}
-
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block b %}Écologique{% endblock %}
-{% block b_desc %}En réutilisant l’énergie perdue lors d'un processus, le récupérateur de chaleur contribue à la réduction des gaz à effet de serre {% endblock %}
-
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/verified-account.png"/>{% endblock %}
-{% block c %}Composants de haute qualité{% endblock %}
-{% block c_desc %}Le récupérateur de chaleur installé sur le groupe froid est un matériel agréé, conforme aux normes et de qualité supérieure{% endblock %}
-
-{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/dashboard.png"/>{% endblock %}
-{% block d %}Performance{% endblock %}
-{% block d_desc %}Cette installation a pour but de participer à l'amélioration de la performance énergétique de vos bâtiments et locaux.{% endblock %}
-
-{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/guarantee.png"/>{% endblock %}
-{% block e %}Garantie{% endblock %}
-{% block e_desc %}Nous sommes également présents après votre projet, c'est pourquoi, nous garantissons le matériel installé pendant une durée de 2 ans {% endblock %}
-
-{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/scale.png"/>{% endblock %}
-{% block f %}Régulation{% endblock %}
-{% block f_desc %}Après notre intervention, vous pourrez recycler la chaleur perdue et limiter voir supprimer les surconsommations énergétiques{% endblock %}
-
-{% block g_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
-{% block g %}Eligible au programme de l'Etat{% endblock %}
-{% block g_desc %}{% endblock %}
+{% block avantage %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/ecologique.html') %}
+    {% include('prestations/block/reductionConsommationEnergetique.html') %}
+    {% include('prestations/block/optimisationEnergetique.html') %}
+    {% include('prestations/block/cee.html.twig') %}
+{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}
@@ -50,25 +29,3 @@
     {% include('composantsPages/sportif.html.twig') %}
 {% endblock %}
 
-
-
-{% block avantageSection %}
-    <section class="p-t-100 pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <h2><span>Avantages de cette prestation </span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                {% include('composantsPages/cee.html.twig') %}
-            </div>
-        </div>
-    </section>
-{% endblock %}

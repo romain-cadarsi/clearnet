@@ -14,41 +14,16 @@
 {% block image_asset %}{{ asset('images/prestations/flocage.jpg') }}{% endblock %}
 
 
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/home-automation.png"/>{% endblock %}
-{% block a %}Maîtrise des températures{% endblock %}
-{% block a_desc %}Été comme hiver vous pourrez contrôler la température de votre {% if client is defined %}maison{% else %}immeuble{% endif %}.{% endblock %}
+{% block avantage %}
+    {% include('prestations/block/plusValue.html') %}
+    {% include('prestations/block/regularisationDeLaTemperature.html') %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/isolation.html') %}
+    {% include('prestations/block/bienEtre.html') %}
+    {% include('prestations/block/cee.html.twig') %}
+{% endblock %}
 
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/network.png"/>{% endblock %}
-{% block b %}Utilités multiples{% endblock %}
-{% block b_desc %}Le flocage permet la protection passive des incendies ainsi que la protection contre les attaques de rongeurs. {% endblock %}
 
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/economic-improvement.png"/>{% endblock %}
-{% block c %}Valorisation du parc immobilier {% endblock %}
-{% block c_desc %}Cette méthode apportera une certaine valeur ajoutée à votre bien.{% endblock %}
-
-{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/layers.png"/>{% endblock %}
-{% block d %}Matériaux de qualité{% endblock %}
-{% block d_desc %}Les matériaux utilisés pour le flocage sont des matériaux imputrescibles c'est-à-dire qu'ils ne peuvent pas pourrir.{% endblock %}
-
-{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block e %}Economie d'énergie{% endblock %}
-{% block e_desc %}Cette technique supprime les ponts thermiques et donc les pertes d’énergie. Par conséquent vous ferez des économies.{% endblock %}
-
-{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/yoga.png"/>{% endblock %}
-{% block f %}Réduction des besoins{% endblock %}
-{% block f_desc %}Les besoins en chauffage sont réduits du fait de la diminution des déperditions de chaleur.{% endblock %}
-
-{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/double-tick.png"/>{% endblock %}
-{% block g %}Double isolation{% endblock %}
-{% block g_desc %}Cette technique permet dans un premier temps, d'améliorer votre isolation thermique mais également l'isolation acoustique de votre foyer.{% endblock %}
-
-{% block h_icon %}<img src="https://img.icons8.com/dusk/128/000000/sofa.png"/>{% endblock %}
-{% block h %}Confort{% endblock %}
-{% block h_desc %}Ce procédé améliorera considérablement votre confort thermique en préservant une chaleur constante. {% endblock %}
-
-{% block i_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
-{% block i %}Eligible au programme de l'Etat{% endblock %}
-{% block i_desc %}{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}

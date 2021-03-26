@@ -22,60 +22,17 @@
     d’eau tout en gardant une pression{% endblock %}
 {% block image_asset %}{{ asset('images/prestations/economiseur-eau.jpg') }}{% endblock %}
 
-
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/refund.png"/>{% endblock %}
-{% block a %}Economique{% endblock %}
-{% block a_desc %}En remplacent vos robinets et pommeaux de douche vous économiserez jusqu'à 50 % de votre consommation d'eau{% endblock %}
-
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/good-quality.png"/>{% endblock %}
-{% block b %}Composants de haute qualité{% endblock %}
-{% block b_desc %}Nous choisissons pour votre réseau hydraulique (robinets et douches) des pièces de qualité supérieure{% endblock %}
-
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/winner.png"/>{% endblock %}
-{% block c %}Performance {% endblock %}
-{% block c_desc %}Avec des équipements de meilleure qualité, vous optimiserez l'efficacité de vos installations{% endblock %}
-
-{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block d %}Ecologique{% endblock %}
-{% block d_desc %}La réduction de votre consommation d'eau, entraîne une réduction de votre empreinte écologique en diminuant les gaz à effet de serre{% endblock %}
-
-{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/dashboard.png"/>{% endblock %}
-{% block e %}Régulation{% endblock %}
-{% block e_desc %}Après notre intervention, vous pourrez enfin maîtriser précisément le débit d'eau s'écoulant de vos douches et robinets{% endblock %}
-
-{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/guarantee.png"/>{% endblock %}
-{% block f %}Garantie{% endblock %}
-{% block f_desc %}Nous sommes également présents après votre projet, c'est pourquoi, nous garantissons le matériel installé pendant une durée de 2 ans {% endblock %}
-
-{% block g_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
-{% block g %}Eligible au programme de l'Etat{% endblock %}
-{% block g_desc %}{% endblock %}
+{% block avantage %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/performance.html') %}
+    {% include('prestations/block/ecologique.html') %}
+    {% include('prestations/block/maitriseDebitEau.html') %}
+    {% include('prestations/block/cee.html.twig') %}
+{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/collectivite.html.twig') %}
     {% include('composantsPages/tertiaire.html.twig') %}
     {% include('composantsPages/sante.html.twig') %}
     {% include('composantsPages/sportif.html.twig') %}
-{% endblock %}
-
-
-{% block avantageSection %}
-    <section class="p-t-100 pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <h2><span>Avantages de cette prestation </span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                {% include('composantsPages/cee.html.twig') %}
-            </div>
-        </div>
-    </section>
 {% endblock %}

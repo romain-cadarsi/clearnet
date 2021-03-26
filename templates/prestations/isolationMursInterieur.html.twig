@@ -11,26 +11,14 @@
     l’extérieur et l’intérieur de votre logement. L’air froid ne rentre plus plein hiver et la fraicheur est
     préservé en plein été !{% endblock %}
 {% block image_asset %}{{ asset('images/prestations/isolation-interieur.jpg') }}{% endblock %}
+{% block avantage %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/plusValue.html') %}
+    {% include('prestations/block/bienEtre.html') %}
+    {% include('prestations/block/cee.html.twig') %}
+    {% include('prestations/block/maPrimRenov.html.twig') %}
+{% endblock %}
 
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block a %}Economie d'énergie{% endblock %}
-
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/economic-improvement.png"/>{% endblock %}
-{% block b %}Valorisation du bien immobilier {% endblock %}
-{% block b_desc %}L'isolation des murs intérieur apportera une plus-value notable à votre bien.{% endblock %}
-
-
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/sofa.png"/>{% endblock %}
-{% block c %}Confort{% endblock %}
-{% block c_desc %}{% endblock %}
-
-{% block d_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
-{% block d %}Eligible au programme de l'Etat{% endblock %}
-{% block d_desc %}{% endblock %}
-
-{% block e_icon %}<img src="{{ asset('images/maPrimRenov128.png') }}"/>{% endblock %}
-{% block e %}MaPrimRénov'{% endblock %}
-{% block e_desc %}Vous pouvez béneficier de maPrimRénov' si vous êtes particulier{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/sante.html.twig') %}

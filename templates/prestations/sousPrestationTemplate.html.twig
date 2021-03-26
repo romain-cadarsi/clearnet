@@ -33,75 +33,16 @@
         <section class="pb-0">
             <div class="container">
                 <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                    <h4><span>Quels sont les avantages ?</span></h4>
+                    <h4><span>Quels sont les avantages de cette prestation?</span></h4>
                 </div>
             </div>
         </section>
 
         <section>
             <div class="container">
-                <div class="row text-center">
-
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block a_icon %} {% endblock %}
-                        </div>
-                        <h3>{% block a %} {% endblock %}</h3>
-                        <p>{% block a_desc %}{% endblock %}</p>
-                    </div>
-
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block b_icon %}{% endblock %}
-                        </div>
-                        <h3>{% block b %} {% endblock %}</h3>
-                        <p>{% block b_desc %}{% endblock %}</p>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block c_icon %}{% endblock %}
-                        </div>
-                        <h3>{% block c %} {% endblock %}</h3>
-                        <p>{% block c_desc %}{% endblock %}</p>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block d_icon %}{% endblock %}
-                        </div>
-                        <h3>{% block d %} {% endblock %}</h3>
-                        <p>{% block d_desc %}{% endblock %}</p>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block e_icon %}{% endblock %}
-                        </div>
-                        <h3>{% block e %} {% endblock %}</h3>
-                        <p>{% block e_desc %}{% endblock %}</p>
-                    </div>
-
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block f_icon %}{% endblock %}
-                        </div>
-                        <h3>{% block f %} {% endblock %}</h3>
-                        <p>{% block f_desc %}{% endblock %}</p>
-                    </div>
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block g_icon %}{% endblock %}
-                        </div>
-                        <h3>{% block g %} {% endblock %}</h3>
-                        <p>{% block g_desc %}{% endblock %}</p>
-                    </div>
-
-                    <div class="col-lg-3"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <div class="icon-box mb-0">
-                            {% block h_icon %}{% endblock %}
-                        </div>
-                        <h3>{% block h %} {% endblock %}</h3>
-                        <p>{% block h_desc %}{% endblock %}</p>
-
-                    </div>
+                <div class="carousel client-logos" data-items="6" data-items-sm="3" data-items-xs="2" data-items-xxs="2" data-margin="0" data-arrows="true" data-autoplay="true" data-autoplay="1000" data-loop="true">
+                    {% block avantage %}
+                    {% endblock %}
                 </div>
             </div>
         </section>
@@ -125,8 +66,4 @@
                 </div>
             </div>
         </section>
-
-        {% block avantageSection %}
-
-        {% endblock %}
 

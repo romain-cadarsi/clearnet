@@ -242,5 +242,14 @@ class WebsiteController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/pro", name="pro")
+     */
+    public function pro(): Response
+    {
+        return $this->render('pages/pro.html.twig', [
+        ]);
+    }
+
 
 }

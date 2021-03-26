@@ -11,26 +11,13 @@
 {% block image_asset %}{{ asset('images/prestations/chauffeEauSolaire.jpeg') }}{% endblock %}
 
 
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/refund.png"/>{% endblock %}
-{% block a %}Economique{% endblock %}
-
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/winner.png"/>{% endblock %}
-{% block b %}Performance{% endblock %}
-
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block c %}Ecologique{% endblock %}
-
-{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/easy.png"/>{% endblock %}
-{% block d %}Simple d'installation{% endblock %}
-
-{% block e_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
-{% block e %}Eligible au programme de l'Etat{% endblock %}
-{% block e_desc %}{% endblock %}
-
-{% block f_icon %}<img src="{{ asset('images/maPrimRenov128.png') }}"/>{% endblock %}
-{% block f %}MaPrimRénov'{% endblock %}
-{% block f_desc %}Vous pouvez béneficier de maPrimRénov' si vous êtes particulier{% endblock %}
-
+{% block avantage %}
+    {% include('prestations/block/maPrimRenov.html.twig') %}
+    {% include('prestations/block/cee.html.twig') %}
+    {% include('prestations/block/ecologique.html') %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/chauffeRapide.html') %}
+{% endblock %}
 {% block beneficiaire %}
     {% include('composantsPages/particulier.html.twig') %}
 {% endblock %}

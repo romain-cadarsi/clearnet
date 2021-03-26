@@ -12,63 +12,18 @@
     vos installations d’eaux et de chauffage.{% endblock %}
 {% block image_asset %}{{ asset('images/prestations/calorifugeage.jpg') }}{% endblock %}
 
-
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/home-automation.png"/>{% endblock %}
-{% block a %}Maîtrise des températures{% endblock %}
-{% block a_desc %}Été comme hiver vous pourrez contrôler la température de votre immeuble.{% endblock %}
-
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/delete-file.png"/>{% endblock %}
-{% block b %}Aucune démarche{% endblock %}
-{% block b_desc %}Vous n'aurez aucune démarche administrative à prévoir. {% endblock %}
-
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/economic-improvement.png"/>{% endblock %}
-{% block c %}Valorisation du parc immobilier {% endblock %}
-{% block c_desc %}Le calorifugeage apportera une plus-value notable à votre bien.{% endblock %}
-
-{% block d_icon %}<img src="https://img.icons8.com/dusk/128/000000/module.png"/>{% endblock %}
-{% block d %}Modulable{% endblock %}
-{% block d_desc %}Lors de la pose, toutes les modifications sont possibles.{% endblock %}
-
-{% block e_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block e %}Economie d'énergie{% endblock %}
-{% block e_desc %}La diminution des déperditions thermiques engendre une réduction de la consommation énergétique.{% endblock %}
-
-{% block f_icon %}<img src="https://img.icons8.com/dusk/128/000000/time-span.png"/>{% endblock %}
-{% block f %}Rapidité{% endblock %}
-{% block f_desc %}Les travaux de calorifugeage peuvent parfois durer quelques heures pour un local individuel.{% endblock %}
-
-{% block g_icon %}<img src="https://img.icons8.com/dusk/128/000000/warranty-card.png"/>{% endblock %}
-{% block g %}Experience{% endblock %}
-{% block g_desc %}Eco Environnement est spécialisé dans le calorifugeage depuis plus de 10 ans.{% endblock %}
-
-{% block h_icon %}<img src="{{ asset('images/cee128.jpg')}}"/>{% endblock %}
-{% block h %}Éligible au programme d'Etat{% endblock %}
-{% block h_desc %}Le calorifugeage est entièrement pris en charge dans le cadre du programme des CEE.{% endblock %}
-
+{% block avantage %}
+    {% include('prestations/block/isolation.html') %}
+    {% include('prestations/block/cee.html.twig') %}
+    {% include('prestations/block/aucuneDemarche.html') %}
+    {% include('prestations/block/plusValue.html') %}
+    {% include('prestations/block/pose.html') %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/regularisationDeLaTemperature.html') %}
+{% endblock %}
 {% block beneficiaire %}
     {% include('composantsPages/syndic.html.twig') %}
     {% include('composantsPages/tertiaire.html.twig') %}
     {% include('composantsPages/sante.html.twig') %}
     {% include('composantsPages/bailleur.html.twig') %}
-{% endblock %}
-
-{% block avantageSection %}
-    <section class="p-t-100 pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                        <h2><span>Avantages de cette prestation </span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="row text-center">
-                {% include('composantsPages/cee.html.twig') %}
-            </div>
-        </div>
-    </section>
 {% endblock %}

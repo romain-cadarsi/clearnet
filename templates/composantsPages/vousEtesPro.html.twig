@@ -2,18 +2,10 @@
 <h2 class="text-center"> Quel est votre statut ?</h2>
 <div class="row text-center">
     <div class="col"  data-animate="fadeInUp" data-animate-delay="0" >
-        <div class="icon-box mb-0">
-            <a href="{{ path('syndic') }}">
-                <img src="https://img.icons8.com/dusk/256/000000/department.png"/></a>
+        <div class="icon-box mb-0"><a href="{{ path('tertiaire') }}">
+                <img src="https://img.icons8.com/dusk/256/000000/client-company--v2.png"/></a>
         </div>
-        <a href="{{ path('syndic') }}"><h3>Syndic de copropriété</h3></a>
-    </div>
-    <div class="col"  data-animate="fadeInUp" data-animate-delay="0" >
-        <div class="icon-box mb-0">
-            <a href="{{ path('bailleur') }}">
-                <img src="https://img.icons8.com/dusk/256/000000/company.png"/></a>
-        </div>
-        <a href="{{ path('bailleur') }}"><h3>Bailleurs sociaux</h3></a>
+        <a href="{{ path('tertiaire') }}"><h3>Secteur tertiaire</h3></a>
     </div>
     <div class="col"  data-animate="fadeInUp" data-animate-delay="0" >
         <div class="icon-box mb-0">
@@ -23,10 +15,11 @@
         <a href="{{ path('sante') }}"><h3>Organisme de santé</h3></a>
     </div>
     <div class="col"  data-animate="fadeInUp" data-animate-delay="0" >
-        <div class="icon-box mb-0"><a href="{{ path('tertiaire') }}">
-                <img src="https://img.icons8.com/dusk/256/000000/client-company--v2.png"/></a>
+        <div class="icon-box mb-0">
+            <a href="{{ path('syndic') }}">
+                <img src="https://img.icons8.com/dusk/256/000000/department.png"/></a>
         </div>
-        <a href="{{ path('tertiaire') }}"><h3>Secteur tertiaire</h3></a>
+        <a href="{{ path('syndic') }}"><h3>Syndic de copropriété</h3></a>
     </div>
     <div class="col"  data-animate="fadeInUp" data-animate-delay="0" >
         <div class="icon-box mb-0">
@@ -34,5 +27,12 @@
 
         </div>
         <a href="{{ path('collectivite') }}"><h3>Collectivité</h3></a>
+    </div>
+    <div class="col"  data-animate="fadeInUp" data-animate-delay="0" >
+        <div class="icon-box mb-0">
+            <a href="{{ path('bailleur') }}">
+                <img src="https://img.icons8.com/dusk/256/000000/company.png"/></a>
+        </div>
+        <a href="{{ path('bailleur') }}"><h3>Bailleurs sociaux</h3></a>
     </div>
 </div>

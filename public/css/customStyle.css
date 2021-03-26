@@ -14,6 +14,12 @@
 .subvention.cee{
     background-color: red;
 }
+.flickity-prev-next-button{
+    opacity: 0.2 !important;
+}
+.flickity-prev-next-button:hover{
+    opacity: 1 !important;
+}
 .subvention.maprimrenov{
     background-color: green;
 }

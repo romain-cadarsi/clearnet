@@ -2,31 +2,21 @@
 
 {% block prestation_title %}Ballon thermodynamique{% endblock %}
 {% block prestation_description %}Le chauffe-eau thermodynamique est un équipement qui permet
-d’offrir une solution performante et économique pour subvenir aux
-besoins en eau chaude sanitaire de toute la maison.{% endblock %}
+    d’offrir une solution performante et économique pour subvenir aux
+    besoins en eau chaude sanitaire de toute la maison.{% endblock %}
 {% block fonctionnement %}Le principe du chauffe-eau thermodynamique est similaire à celui d’une pompe à chaleur. Il va
     capturer l’énergie présente dans l’air ambiant et se servir de cette chaleur pour chauffer l’eau du
     ballon. Le ballon thermodynamique peut être installé sur ai ambiant ou sur air extérieur. En effet,
     l’air peut être prélevé à l’intérieur de la pièce où est installé le ballon ou à l’extérieur{% endblock %}
 {% block image_asset %}{{ asset('images/prestations/ballon.webp') }}{% endblock %}
 
-
-{% block a_icon %}<img src="https://img.icons8.com/dusk/128/000000/refund.png"/>{% endblock %}
-{% block a %}Economique{% endblock %}
-
-{% block b_icon %}<img src="https://img.icons8.com/dusk/128/000000/dashboard.png"/>{% endblock %}
-{% block b %}Temps de chauffe rapide{% endblock %}
-
-{% block c_icon %}<img src="https://img.icons8.com/dusk/128/000000/leaf.png"/>{% endblock %}
-{% block c %}Ecologique{% endblock %}
-
-{% block d_icon %}<img src="{{ asset('images/cee128.jpg') }}"/>{% endblock %}
-{% block d %}Eligible au programme de l'Etat{% endblock %}
-{% block d_desc %}{% endblock %}
-
-{% block e_icon %}<img src="{{ asset('images/maPrimRenov128.png') }}"/>{% endblock %}
-{% block e %}MaPrimRénov'{% endblock %}
-{% block e_desc %}Vous pouvez béneficier de maPrimRénov' si vous êtes particulier{% endblock %}
+{% block avantage %}
+    {% include('prestations/block/economique.html') %}
+    {% include('prestations/block/chauffeRapide.html') %}
+    {% include('prestations/block/ecologique.html') %}
+    {% include('prestations/block/cee.html.twig') %}
+    {% include('prestations/block/maPrimRenov.html.twig') %}
+{% endblock %}
 
 {% block beneficiaire %}
     {% include('composantsPages/particulier.html.twig') %}
