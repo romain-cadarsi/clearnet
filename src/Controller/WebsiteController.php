@@ -23,7 +23,7 @@ class WebsiteController extends AbstractController
      */
     public function prestations(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/nosPrestations.html.twig', [
         ]);
     }
 
@@ -32,7 +32,7 @@ class WebsiteController extends AbstractController
      */
     public function aboutUs(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/quiSommesNous.html.twig', [
         ]);
     }
 
@@ -41,7 +41,7 @@ class WebsiteController extends AbstractController
      */
     public function contact(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/contact.html.twig', [
         ]);
     }
 
@@ -50,7 +50,7 @@ class WebsiteController extends AbstractController
      */
     public function zoneDintervention(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/carteDintervention.html.twig', [
         ]);
     }
 
@@ -59,7 +59,7 @@ class WebsiteController extends AbstractController
      */
     public function organisation(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/notreOrganisation.html.twig', [
         ]);
     }
 
@@ -68,7 +68,7 @@ class WebsiteController extends AbstractController
      */
     public function ilsNousFontConfiance(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/ilsNousFontConfiance.html.twig', [
         ]);
     }
 
@@ -77,7 +77,7 @@ class WebsiteController extends AbstractController
      */
     public function engagement(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/nosEngagements.html.twig', [
         ]);
     }
 
@@ -86,7 +86,7 @@ class WebsiteController extends AbstractController
      */
     public function isolationCombles(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/isolationCombles.html.twig', [
         ]);
     }
     /**
@@ -94,7 +94,7 @@ class WebsiteController extends AbstractController
      */
     public function calorifugeage(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/calorifugeage.html.twig', [
         ]);
     }
     /**
@@ -102,7 +102,7 @@ class WebsiteController extends AbstractController
      */
     public function economiseurDeau(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/economiseurDeau.html.twig', [
         ]);
     }
     /**
@@ -110,7 +110,7 @@ class WebsiteController extends AbstractController
      */
     public function flocage(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/flocage.html.twig', [
         ]);
     }
     /**
@@ -118,7 +118,7 @@ class WebsiteController extends AbstractController
      */
     public function matelasIsolant(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/matelasIsolant.html.twig', [
         ]);
     }
 
@@ -127,7 +127,7 @@ class WebsiteController extends AbstractController
      */
     public function ecoRegulateur(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/ecoRegulateur.html.twig', [
         ]);
     }
 
@@ -136,7 +136,7 @@ class WebsiteController extends AbstractController
      */
     public function organeDeChauffe(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/organeDeChauffe.html.twig', [
         ]);
     }
 
@@ -145,7 +145,7 @@ class WebsiteController extends AbstractController
      */
     public function recuperateurDeChaleurSurGroupeFroid(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/recuperateurChaleurGroupeFroid.html.twig', [
         ]);
     }
 
@@ -154,7 +154,8 @@ class WebsiteController extends AbstractController
      */
     public function isolationThermiqueInterieur(Request $request): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/isolationThermiqueInterieur.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
@@ -163,7 +164,8 @@ class WebsiteController extends AbstractController
      */
     public function isolationThermiqueExterieur(Request $request): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/isolationThermiqueExterieur.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
@@ -172,7 +174,8 @@ class WebsiteController extends AbstractController
      */
     public function pompeAChaleur(Request $request): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/pompeAChaleur.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
@@ -181,7 +184,8 @@ class WebsiteController extends AbstractController
      */
     public function productionEauChaudeSanitaire(Request $request): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('prestations/productionEauChaudeSanitaire.html.twig', [
+            'client' => $request->get('client')
         ]);
     }
 
@@ -190,7 +194,7 @@ class WebsiteController extends AbstractController
      */
     public function particulier(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/particulier.html.twig', [
         ]);
     }
 
@@ -199,7 +203,7 @@ class WebsiteController extends AbstractController
      */
     public function bailleur(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/bailleur.html.twig', [
         ]);
     }
     /**
@@ -207,7 +211,7 @@ class WebsiteController extends AbstractController
      */
     public function syndic(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/syndic.html.twig', [
         ]);
     }
 
@@ -216,7 +220,7 @@ class WebsiteController extends AbstractController
      */
     public function collectivite(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/collectivite.html.twig', [
         ]);
     }
 
@@ -225,7 +229,7 @@ class WebsiteController extends AbstractController
      */
     public function tertiaire(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/tertiaire.html.twig', [
         ]);
     }
 
@@ -234,7 +238,7 @@ class WebsiteController extends AbstractController
      */
     public function sante(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/sante.html.twig', [
         ]);
     }
 
@@ -243,7 +247,7 @@ class WebsiteController extends AbstractController
      */
     public function pro(): Response
     {
-        return $this->render('maintenance.html.twig', [
+        return $this->render('pages/pro.html.twig', [
         ]);
     }
 
