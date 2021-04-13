@@ -160,6 +160,16 @@ class WebsiteController extends AbstractController
     }
 
     /**
+     * @Route("/prestations/isolation-thermique-interieur-pro", name="isolationThermiqueInterieurPro")
+     */
+    public function isolationThermiqueInterieurPro(Request $request): Response
+    {
+        return $this->render('prestations/isolationThermiqueInterieurPro.html.twig', [
+            'client' => $request->get('client')
+        ]);
+    }
+
+    /**
      * @Route("/prestations/isolation-thermique-exterieur", name="isolationThermiqueExterieur")
      */
     public function isolationThermiqueExterieur(Request $request): Response

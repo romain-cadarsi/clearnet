@@ -5,11 +5,28 @@
 .light-green *{
  color: #5dd598;
 }
-
+.avantages{
+    position: absolute;
+    right : 0;
+    width : 200px;
+}
+.avantages img{
+    max-width:120px;
+}
 .subvention{
     border-radius: 5px;
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.1);
     transition: 0.5s ease;
+}
+.avantages:after{
+    content: "";
+    width: 1000px;
+    background-color: #8eba57;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
 }
 .subvention.cee{
     background-color: red;
@@ -57,7 +74,7 @@
 
 .icon-box img {
     color: #0f954f;
-    opacity: 0.5;
+    opacity: 0.8;
     transition: 0.5s ease;
 }
 .icon-box:hover img{

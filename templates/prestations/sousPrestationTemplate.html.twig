@@ -1,5 +1,5 @@
 
-        <section class="p-t-100 pb-0">
+        <section class="p-t-100 pb-0 bg-light">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -12,7 +12,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="bg-light">
             <div class="container"  data-animate="fadeInUp" data-animate-delay="0">
                 <div class="row">
                     <div class="col-lg-6">
@@ -30,24 +30,29 @@
             </div>
         </section>
 
-        <section class="pb-0">
+        <section class="d-xl-none d-lg-block pb-0 bg-light">
             <div class="container">
                 <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
-                    <h4><span>Quels sont les avantages de cette prestation?</span></h4>
+                    <h4><span>Quels sont les avantages de cette prestation ?</span></h4>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <div class="carousel client-logos" data-items="6" data-items-sm="3" data-items-xs="2" data-items-xxs="2" data-margin="0" data-arrows="true" data-autoplay="true" data-autoplay="1000" data-loop="true">
+                <div class="row">
                     {% block avantage %}
                     {% endblock %}
                 </div>
             </div>
         </section>
+        <section class="pb-0 d-none d-xl-block bg-light" >
+            <div class="container">
+                <div class="heading-text heading-gradient"  data-animate="fadeInUp" data-animate-delay="0" >
+                    <h4><span>Quels sont les avantages de cette prestation?</span></h4>
+                </div>
+                <div class="carousel client-logos" data-items="6" data-items-sm="3" data-items-xs="2" data-items-xxs="2" data-margin="0" data-arrows="true" data-autoplay="true" data-autoplay="1000" data-loop="true">
+                    {{  block('avantage') }}
+                </div>
+            </div>
+        </section>
 
-        <section class="p-t-100 pb-0">
+        <section class="p-t-100 pb-0 bg-light">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -56,10 +61,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section>
-            <div class="container">
                 <div class="row text-center">
                     {% block beneficiaire %}
                     {% endblock %}

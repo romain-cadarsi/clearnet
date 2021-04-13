@@ -14,8 +14,6 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class SimulationController extends AbstractController
 {
-
-
     /**
      * @Route("/simulation/isolation", name="simulationIsolation")
      */
